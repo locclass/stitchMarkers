@@ -71,6 +71,7 @@
         let numRows = 1;
         let stitchDefs = [];
         let language = "en-GB";
+        document.cookie = "stitchCount=" + stitchCount + ";increaseCount=" + increaseCount + ";decreaseCount=" + decreaseCount + ";pendingColumn=" + pendingColumn + ";numRows=" + numRows + ";language=" + language;
 
         // html object definitions
         let modal;
@@ -277,6 +278,33 @@
             }
             return patterns;
         }
+
+        function getCookie(cookieName) {
+            //document.cookie = "stitchCount=" + stitchCount + ";increaseCount=" + increaseCount + ";decreaseCount=" + decreaseCount + ";pendingColumn=" + pendingColumn + ";numRows=" + numRows + ";language=" + language;   
+            let allCookies = document.cookie.split(';');
+            cookieName = cookieName + "=";
+            for (let i = 0; i < ca.length; i++) {
+                let c = allCookies[i];
+                if (c.indexOf(cookieName) == 0) {
+                    return c.substring(cookieName.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function modifyCookie(cookieName, newValue){
+            if (getCookie(cookieName) == "") return false;
+            let actualCookieString = document.cookie;
+            let cookieIndex = actualCookieString.indexOf(cookieName + "=");
+            let substringCookie = actualCookieString.substring(cookieIndex);
+            let currentValue = substringCookie.split(';')[0];
+            
+            actualCookieString = actualCookieString.replace(cookieName + "=" + currentValue,cookieName + "=" + newValue + ";");
+            document.cookie = actualCookieString;
+
+            return true;
+        }
+
 
     </script>
 
