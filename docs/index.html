@@ -141,7 +141,7 @@
         async function getStitchDefinitions() {
             let defsAsStrings;
             try {
-                let response = await fetch('/csv')
+                let response = await fetch('/stitchMarkers/docs/stitches.csv')
                     .then(response => response.text())
                     .then(data => {
                         defsAsStrings = data;
