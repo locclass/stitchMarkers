@@ -156,22 +156,30 @@
 
             for (let i = 1; i < rows.length; i++) {
                 let properties = rows[i].split(';');
-                localStorage.setItem("stitchDefs",localStorage.getItem("stitchDefs") + String({
+                if (localStorage.getItem("stitchDefs") == null) localStorage.setItem("stitchDefs",String({
                     'name': properties[0],
                     'shortHand': properties[1],
                     'numStitches': properties[2],
                     'numIncreases': properties[3],
                     'numDecreases': properties[4],
                     'instructions': properties[5]
-                }));
-                stitchDefs.push({
-                    'name': properties[0],
-                    'shortHand': properties[1],
-                    'numStitches': properties[2],
-                    'numIncreases': properties[3],
-                    'numDecreases': properties[4],
-                    'instructions': properties[5]
-                });
+                }))
+                // localStorage.setItem("stitchDefs",localStorage.getItem("stitchDefs") + String({
+                //     'name': properties[0],
+                //     'shortHand': properties[1],
+                //     'numStitches': properties[2],
+                //     'numIncreases': properties[3],
+                //     'numDecreases': properties[4],
+                //     'instructions': properties[5]
+                // }));
+                // stitchDefs.push({
+                //     'name': properties[0],
+                //     'shortHand': properties[1],
+                //     'numStitches': properties[2],
+                //     'numIncreases': properties[3],
+                //     'numDecreases': properties[4],
+                //     'instructions': properties[5]
+                // });
             }
 
 
