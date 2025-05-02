@@ -1,0 +1,110 @@
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.1" version="2.1">
+    <file original="global" datatype="HTML" source-language="en-GB">
+        <body>
+            <group id="stitchNames">
+                <unit id="st_n_Knit">
+                    <segment>
+                        <source>Knit</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_Purl">
+                    <segment>
+                        <source>Purl</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_Yarn over">
+                    <segment>
+                        <source>Yarn over</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_Knit two together">
+                    <segment>
+                        <source>Knit two together</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_Purl two together">
+                    <segment>
+                        <source>Purl two together</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_Slip, slip, knit">
+                    <segment>
+                        <source>Slip, slip, knit</source>
+                    </segment>
+                </unit>
+
+            </group>
+            <group id="shortHands">
+                <unit id="st_sh_k">
+                    <segment>
+                        <source>k</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_p">
+                    <segment>
+                        <source>p</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_yo">
+                    <segment>
+                        <source>yo</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_k2tog">
+                    <segment>
+                        <source>k2tog</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_p2tog">
+                    <segment>
+                        <source>p2tog</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_ssk">
+                    <segment>
+                        <source>ssk</source>
+                    </segment>
+                </unit>
+
+            </group>
+            <group id="instructions">
+                <unit id="st_ins_k">
+                    <segment>
+                        <source>Knit one</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p">
+                    <segment>
+                        <source>Purl one</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_yo">
+                    <segment>
+                        <source>Pass yarn over the right needle.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_k2tog">
+                    <segment>
+                        <source>With yarn at back, enter your right needle into the first two
+                            stitches in your left needle, from left to right, and knit both at the
+                            same time.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p2tog">
+                    <segment>
+                        <source>With yarn at front, enter your right needle into the first two
+                            stitches in your left needle, from right to left, and purl both at the
+                            same time.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ssk">
+                    <segment>
+                        <source>Slip the first stich onto the right needle. Knit the second stitch,
+                            then pass the first stich over the generated loop.</source>
+                    </segment>
+                </unit>
+
+            </group>
+        </body>
+    </file>
+</xliff>
