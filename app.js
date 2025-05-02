@@ -81,7 +81,7 @@ app.post('/loadStitches', (req, res) => {
 });
 
 app.get('/csv', (req, res) => {
-    const filePath = path.join(__dirname, 'public', 'stitches.csv');
+    const filePath = path.join(__dirname, 'docs', 'stitches.csv');
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
             return res.status(500).send('Error reading CSV file: ' + err);
