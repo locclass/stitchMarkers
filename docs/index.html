@@ -71,7 +71,10 @@
         let numRows = 1;
         let stitchDefs = [];
         let language = "en-GB";
-        document.cookie = "stitchCount=" + stitchCount + ";increaseCount=" + increaseCount + ";decreaseCount=" + decreaseCount + ";pendingColumn=" + pendingColumn + ";numRows=" + numRows + ";language=" + language;
+        document.cookie = "stitchCount=" + stitchCount + ";" 
+        
+        document.cookie = "increaseCount=" + increaseCount + ";"
+        document.cookie = + decreaseCount + ";pendingColumn=" + pendingColumn + ";numRows=" + numRows + ";language=" + language;
 
         // html object definitions
         let modal;
