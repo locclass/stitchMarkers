@@ -71,10 +71,13 @@
         let numRows = 1;
         let stitchDefs = [];
         let language = "en-GB";
-        document.cookie = "stitchCount=" + stitchCount + ";" 
-        
-        document.cookie = "increaseCount=" + increaseCount + ";"
-        document.cookie = + decreaseCount + ";pendingColumn=" + pendingColumn + ";numRows=" + numRows + ";language=" + language;
+        localStorage.setItem("stitchCount",0);
+        localStorage.setItem("increaseCount",0);
+        localStorage.setItem("decreaseCount",0);
+        localStorage.setItem("numRows",1);
+        localStorage.setItem("pendingColumn",false);
+        localStorage.setItem("stitchDefs",null);
+        localStorage.setItem("language","en-GB");
 
         // html object definitions
         let modal;
@@ -153,6 +156,14 @@
 
             for (let i = 1; i < rows.length; i++) {
                 let properties = rows[i].split(';');
+                localStorage.setItem("stitchDefs",localStorage.getItem("stitchDefs") + String({
+                    'name': properties[0],
+                    'shortHand': properties[1],
+                    'numStitches': properties[2],
+                    'numIncreases': properties[3],
+                    'numDecreases': properties[4],
+                    'instructions': properties[5]
+                }));
                 stitchDefs.push({
                     'name': properties[0],
                     'shortHand': properties[1],
@@ -227,7 +238,7 @@
         function addStitchToRow(stValue, numReps) {
             // I'm expecting stValue to be the id
             let stName = stValue.replace("st_n_", "");
-            let fullSt = stitchDefs.find((st) => st['name'] == stName);
+            let fullSt = localStorage.getItem("stitchDefs").find((st) => st['name'] == stName);
             let numInc = fullSt['numIncreases'];
             let numDec = fullSt['numDecreases'];
 
@@ -239,6 +250,7 @@
 
             console.log("num reps: " + numReps);
             if (numInc != 0) {
+                localStorage.setItem("stitchCount",Number(localStorage.getItem("stitchCount"))+numReps * numInc);
                 stitchCount += numReps * numInc;
                 increaseCount += numReps * numInc;
                 pTotalInc.innerHTML = null;
@@ -282,31 +294,31 @@
             return patterns;
         }
 
-        function getCookie(cookieName) {
-            //document.cookie = "stitchCount=" + stitchCount + ";increaseCount=" + increaseCount + ";decreaseCount=" + decreaseCount + ";pendingColumn=" + pendingColumn + ";numRows=" + numRows + ";language=" + language;   
-            let allCookies = document.cookie.split(';');
-            cookieName = cookieName + "=";
-            for (let i = 0; i < ca.length; i++) {
-                let c = allCookies[i];
-                if (c.indexOf(cookieName) == 0) {
-                    return c.substring(cookieName.length, c.length);
-                }
-            }
-            return "";
-        }
+        // function getCookie(cookieName) {
+        //     //document.cookie = "stitchCount=" + stitchCount + ";increaseCount=" + increaseCount + ";decreaseCount=" + decreaseCount + ";pendingColumn=" + pendingColumn + ";numRows=" + numRows + ";language=" + language;   
+        //     let allCookies = document.cookie.split(';');
+        //     cookieName = cookieName + "=";
+        //     for (let i = 0; i < ca.length; i++) {
+        //         let c = allCookies[i];
+        //         if (c.indexOf(cookieName) == 0) {
+        //             return c.substring(cookieName.length, c.length);
+        //         }
+        //     }
+        //     return "";
+        // }
 
-        function modifyCookie(cookieName, newValue){
-            if (getCookie(cookieName) == "") return false;
-            let actualCookieString = document.cookie;
-            let cookieIndex = actualCookieString.indexOf(cookieName + "=");
-            let substringCookie = actualCookieString.substring(cookieIndex);
-            let currentValue = substringCookie.split(';')[0];
+        // function modifyCookie(cookieName, newValue){
+        //     if (getCookie(cookieName) == "") return false;
+        //     let actualCookieString = document.cookie;
+        //     let cookieIndex = actualCookieString.indexOf(cookieName + "=");
+        //     let substringCookie = actualCookieString.substring(cookieIndex);
+        //     let currentValue = substringCookie.split(';')[0];
             
-            actualCookieString = actualCookieString.replace(cookieName + "=" + currentValue,cookieName + "=" + newValue + ";");
-            document.cookie = actualCookieString;
+        //     actualCookieString = actualCookieString.replace(cookieName + "=" + currentValue,cookieName + "=" + newValue + ";");
+        //     document.cookie = actualCookieString;
 
-            return true;
-        }
+        //     return true;
+        // }
 
 
     </script>
