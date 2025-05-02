@@ -1,0 +1,20 @@
+name,shortHand,numStitches,numInc,numDec,instructions
+Knit,k,1,0,0,"Knit one"
+Purl,p,1,0,0,"Purl one"
+Yarn over,yo,1,1,0,"Pass yarn over the right needle."
+Knit two together,k2tog,1,0,1,"With yarn at back, enter your right needle into the first two stitches in your left needle, from left to right, and knit both at the same time."
+Purl two together,p2tog,1,0,1,"With yarn at front, enter your right needle into the first two stitches in your left needle, from right to left, and purl both at the same time."
+"Slip, slip, knit",ssk,1,0,1,"Slip the first stich onto the right needle. Knit the second stitch, then pass the first stich over the generated loop."
+Rib,rib,2,0,0,"K1, P1"
+Cast on,co,1,1,0,"Make a slip knot. Slide slip knot onto needle. Pull yarn to tighten knot. Wrap the working yarn around your thumb so you have a loop around your thumb. Bring the needle under and up through the loop around your thumb. Remove your thumb from the loop and pull the yarn."
+Bind off,bo,1,0,1,"Insert the tip of the left needle into the front of the right-hand st on the right needle. Lift up and over the left-hand st. Allow st on the left needle to drop off the needle, leaving just one stitch on the right needle."
+Make one stitch,m1,1,1,0
+Drop one stitch,d1,1,0,1, Take st off needle and unravel it until the beginning of the project.
+Make bobble,MB,1,0,0,"Knit into desired st without dropping the loop off the left needle. Knit same st through back loop, then through front loop."
+Cross 3 stitches backwards,C3B,3,0,0,"Slip next 2 sts onto cable needle and leave at back of work, K1, then K2 from cable needle."
+Cross 3 stitches forward,C3F,3,0,0,"Slip next st onto cable needle and leave at front of work, K2, then K1 from cable needle."
+Cross 4 stitches left,Cr4L,4,0,0,"Slip next 2 sts onto cable needle and leave at front of work, P2, then K2 from cable needle."
+Cross 4 stitches right,Cr4R,4,0,0,"Slip next 2 sts onto cable needle and leave at back of work, K2, then P2 from cable needle."
+Decrease 4,dec4,4,0,4,"Slip next 3 sts with yarn at back (WS) of work, *lift second st on right needle over first (centre) st and off right needle, slip centre st back onto left needle, lift second st on left needle over centre st*, slip centre st back onto right needle, rep from * to * once more (4 sts decreased), K centre st."
+Twist two stitches left,Tw2L,2,0,0,"K into back of second st on left needle then K tog through back loop first and second sts and slip both sts off left needle at same time."
+Twist two stitches right,Tw2R,2,0,0,"K2tog leaving sts on left needle, K first st again and slip both sts off left needle at same time."

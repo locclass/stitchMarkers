@@ -1,0 +1,7 @@
+name;shortHand;numStitches;numInc;numDec;instructions
+Knit;k;1;0;0;Knit one
+Purl;p;1;0;0;Purl one
+Yarn over;yo;0;1;0;Pass yarn over the right needle.
+Knit two together;k2tog;1;0;1;With yarn at back, enter your right needle into the first two stitches in your left needle, from left to right, and knit both at the same time.
+Purl two together;p2tog;1;0;1;With yarn at front, enter your right needle into the first two stitches in your left needle, from right to left, and purl both at the same time.
+Slip, slip, knit;ssk;1;0;1;Slip the first stich onto the right needle. Knit the second stitch, then pass the first stich over the generated loop.
