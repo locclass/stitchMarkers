@@ -153,9 +153,10 @@
                 console.error("everything has gone wrong. call the authorities.")
             }
             let rows = defsAsStrings.split('\n');
-
+            console.table(rows);
             for (let i = 1; i < rows.length; i++) {
                 let properties = rows[i].split(';');
+                console.log(properties);
                 let stitchObject = String({
                     'name': properties[0],
                     'shortHand': properties[1],
