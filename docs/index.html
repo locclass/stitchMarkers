@@ -51,7 +51,7 @@
 
                 <div class="center">Select a stitch</div>
                 <select id="choose-sel">
-                    
+
                 </select>
 
                 <label for="numReps"><span id="strRepeat">Repeat</span><input type="number" min="1" value="1"
@@ -71,13 +71,13 @@
         let numRows = 1;
         let stitchDefs = [];
         let language = "en-GB";
-        localStorage.setItem("stitchCount",0);
-        localStorage.setItem("increaseCount",0);
-        localStorage.setItem("decreaseCount",0);
-        localStorage.setItem("numRows",1);
-        localStorage.setItem("pendingColumn",false);
-        localStorage.setItem("stitchDefs",null);
-        localStorage.setItem("language","en-GB");
+        localStorage.setItem("stitchCount", 0);
+        localStorage.setItem("increaseCount", 0);
+        localStorage.setItem("decreaseCount", 0);
+        localStorage.setItem("numRows", 1);
+        localStorage.setItem("pendingColumn", false);
+        // localStorage.setItem("stitchDefs",null);
+        localStorage.setItem("language", "en-GB");
 
         // html object definitions
         let modal;
@@ -156,12 +156,13 @@
             console.table(rows);
             for (let i = 1; i < rows.length; i++) {
                 let properties = rows[i].split(',');
-                let stitchObject = "{name:" + properties[0] + ";shortHand:" + properties[1] + ";numStitches:" + properties[2] + ";numIncreases:" + properties[3] + ";numDecreases:" + properties[4] + ";instructions:" + properties[5] + "}"
+                let stitchObject = "name:" + properties[0] + ";shortHand:" + properties[1] + ";numStitches:" + properties[2] + ";numIncreases:" + properties[3] + ";numDecreases:" + properties[4] + ";instructions:" + properties[5];
+                if (i != rows.length - 1) stitchObject += "|";
 
                 if (localStorage.getItem("stitchDefs") == null) {
-                    localStorage.setItem("stitchDefs",stitchObject) 
+                    localStorage.setItem("stitchDefs", stitchObject)
                 } else {
-                    localStorage.setItem("stitchDefs",localStorage.getItem("stitchDefs") + ";" + stitchObject);
+                    localStorage.setItem("stitchDefs", localStorage.getItem("stitchDefs") + stitchObject);
                 }
             }
 
@@ -229,10 +230,15 @@
         function addStitchToRow(stValue, numReps) {
             // I'm expecting stValue to be the id
             let stName = stValue.replace("st_n_", "");
-            let allStitches = Array(localStorage.getItem("stitchDefs"));
-            let fullSt = allStitches.find((st) => st[0] == stName);
+            let allStitches = localStorage.getItem("stitchDefs").split('|');
+            let fullSt;
+            for (let i = 0; i < allStitches.length && !fullSt; i++) {
+                fullSt = allStitches[i].split(';');
+                if (fullSt[0] != stName) fullSt = null;
+            }
+            //let fullSt = allStitches.find((st) => st[0] == stName);
             console.log(fullSt);
-            
+
             //"{name:" + properties[0] + ";shortHand:" + properties[1] + ";numStitches:" + properties[2] + ";numIncreases:" + properties[3] + ";numDecreases:" + properties[4] + ";instructions:" + properties[5] + "}"
             let numInc = fullSt[3];
             let numDec = fullSt[4];
@@ -245,7 +251,7 @@
 
             console.log("num reps: " + numReps);
             if (numInc != 0) {
-                localStorage.setItem("stitchCount",Number(localStorage.getItem("stitchCount"))+numReps * numInc);
+                localStorage.setItem("stitchCount", Number(localStorage.getItem("stitchCount")) + numReps * numInc);
                 stitchCount += numReps * numInc;
                 increaseCount += numReps * numInc;
                 pTotalInc.innerHTML = null;
@@ -289,31 +295,6 @@
             return patterns;
         }
 
-        // function getCookie(cookieName) {
-        //     //document.cookie = "stitchCount=" + stitchCount + ";increaseCount=" + increaseCount + ";decreaseCount=" + decreaseCount + ";pendingColumn=" + pendingColumn + ";numRows=" + numRows + ";language=" + language;   
-        //     let allCookies = document.cookie.split(';');
-        //     cookieName = cookieName + "=";
-        //     for (let i = 0; i < ca.length; i++) {
-        //         let c = allCookies[i];
-        //         if (c.indexOf(cookieName) == 0) {
-        //             return c.substring(cookieName.length, c.length);
-        //         }
-        //     }
-        //     return "";
-        // }
-
-        // function modifyCookie(cookieName, newValue){
-        //     if (getCookie(cookieName) == "") return false;
-        //     let actualCookieString = document.cookie;
-        //     let cookieIndex = actualCookieString.indexOf(cookieName + "=");
-        //     let substringCookie = actualCookieString.substring(cookieIndex);
-        //     let currentValue = substringCookie.split(';')[0];
-            
-        //     actualCookieString = actualCookieString.replace(cookieName + "=" + currentValue,cookieName + "=" + newValue + ";");
-        //     document.cookie = actualCookieString;
-
-        //     return true;
-        // }
 
 
     </script>
