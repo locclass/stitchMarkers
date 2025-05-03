@@ -263,10 +263,9 @@
 
             let activeRow = document.getElementById(('row' + numRows).toString());
             let img = document.createElement("img");
-            img.src = "symbols/" + fullSt[1] + ".jpg";
+            img.src = "symbols/" + fullSt[1].replace("shortHand:","") + ".jpg";
             img.style = "width: 50px; height: 50px; padding: 2px;"
             for (let i = 0; i < numReps; i++) {
-                console.log("appending")
                 document.getElementById(activeRow.id).appendChild(img.cloneNode())
             }
         }
