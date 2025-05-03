@@ -246,7 +246,8 @@
         function addStitchToRow(stValue, numReps) {
             // I'm expecting stValue to be the id
             let stName = stValue.replace("st_n_", "");
-            let fullSt = localStorage.getItem("stitchDefs").find((st) => st['name'] == stName);
+            let allStitches = Array(localStorage.getItem("stitchDefs"));
+            let fullSt = allStitches.find((st) => st['name'] == stName);
             let numInc = fullSt['numIncreases'];
             let numDec = fullSt['numDecreases'];
 
