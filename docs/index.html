@@ -156,29 +156,8 @@
             console.table(rows);
             for (let i = 1; i < rows.length; i++) {
                 let properties = rows[i].split(';');
-                console.log(properties);
-                let stitchObject = String({
-                    'name': properties[0],
-                    'shortHand': properties[1],
-                    'numStitches': properties[2],
-                    'numIncreases': properties[3],
-                    'numDecreases': properties[4],
-                    'instructions': properties[5]
-                });
-                if (localStorage.getItem("stitchDefs") == null) {
-                    localStorage.setItem("stitchDefs",stitchObject) 
-                } else {
-                    localStorage.setItem("stitchDefs",localStorage.getItem("stitchDefs") + ";" + stitchObject);
-                }
-                // localStorage.setItem("stitchDefs",localStorage.getItem("stitchDefs") + String({
-                //     'name': properties[0],
-                //     'shortHand': properties[1],
-                //     'numStitches': properties[2],
-                //     'numIncreases': properties[3],
-                //     'numDecreases': properties[4],
-                //     'instructions': properties[5]
-                // }));
-                // stitchDefs.push({
+                let stitchObject = "{name:" + properties[0] + ";shortHand:" + properties[1] + ";numStitches:" + properties[2] + ";numIncreases:" + properties[3] + ";numDecreases:" + properties[4] + ";instructions:" + properties[5] + "}"
+                //String({
                 //     'name': properties[0],
                 //     'shortHand': properties[1],
                 //     'numStitches': properties[2],
@@ -186,6 +165,11 @@
                 //     'numDecreases': properties[4],
                 //     'instructions': properties[5]
                 // });
+                if (localStorage.getItem("stitchDefs") == null) {
+                    localStorage.setItem("stitchDefs",stitchObject) 
+                } else {
+                    localStorage.setItem("stitchDefs",localStorage.getItem("stitchDefs") + ";" + stitchObject);
+                }
             }
 
 
