@@ -229,12 +229,12 @@
 
         function addStitchToRow(stValue, numReps) {
             // I'm expecting stValue to be the id
-            let stName = stValue.replace("st_n_", "");
+            let stShortHand = stValue.replace("st_n_", "");
             let allStitches = localStorage.getItem("stitchDefs").split('|');
             let fullSt;
             for (let i = 0; i < allStitches.length && !fullSt; i++) {
                 fullSt = allStitches[i].split(';');
-                if (fullSt[0] != stName) fullSt = null;
+                if (fullSt[1] != stShortHand) fullSt = null;
             }
             //let fullSt = allStitches.find((st) => st[0] == stName);
             console.log(fullSt);
