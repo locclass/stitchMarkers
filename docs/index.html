@@ -248,6 +248,7 @@
             let stName = stValue.replace("st_n_", "");
             let allStitches = Array(localStorage.getItem("stitchDefs"));
             let fullSt = allStitches.find((st) => st['name'] == stName);
+            console.log(fullSt);
             let numInc = fullSt['numIncreases'];
             let numDec = fullSt['numDecreases'];
 
