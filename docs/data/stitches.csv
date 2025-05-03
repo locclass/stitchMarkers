@@ -8,7 +8,7 @@ Purl two together,p2tog,1,0,1,"With yarn at front, enter your right needle into 
 Rib,rib,2,0,0,"K1, P1"
 Cast on,co,1,1,0,"Make a slip knot. Slide slip knot onto needle. Pull yarn to tighten knot. Wrap the working yarn around your thumb so you have a loop around your thumb. Bring the needle under and up through the loop around your thumb. Remove your thumb from the loop and pull the yarn."
 Bind off,bo,1,0,1,"Insert the tip of the left needle into the front of the right-hand st on the right needle. Lift up and over the left-hand st. Allow st on the left needle to drop off the needle, leaving just one stitch on the right needle."
-Make one stitch,m1,1,1,0
+Make one stitch,m1,1,1,0,"Pull up a loop from knitted fabric. K1."
 Drop one stitch,d1,1,0,1, Take st off needle and unravel it until the beginning of the project.
 Make bobble,MB,1,0,0,"Knit into desired st without dropping the loop off the left needle. Knit same st through back loop, then through front loop."
 Cross 3 stitches backwards,C3B,3,0,0,"Slip next 2 sts onto cable needle and leave at back of work, K1, then K2 from cable needle."

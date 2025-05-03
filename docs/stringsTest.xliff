@@ -1,37 +1,100 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.1" version="2.1">
-    <file original="global" datatype="HTML" source-language="en-GB" target-language="es-LA">
+    <file original="global" datatype="HTML" source-language="en-GB">
         <body>
             <group id="stitchNames">
-                <unit id="st_n_Knit">
+                <unit id="st_n_k">
                     <segment>
                         <source>Knit</source>
-                        <target>Derecho</target>
-                        
                     </segment>
                 </unit>
-                <unit id="st_n_Purl">
+                <unit id="st_n_p">
                     <segment>
                         <source>Purl</source>
                     </segment>
                 </unit>
-                <unit id="st_n_Yarn over">
+                <unit id="st_n_yo">
                     <segment>
                         <source>Yarn over</source>
                     </segment>
                 </unit>
-                <unit id="st_n_Knit two together">
+                <unit id="st_n_k2tog">
                     <segment>
                         <source>Knit two together</source>
                     </segment>
                 </unit>
-                <unit id="st_n_Purl two together">
+                <unit id="st_n_p2tog">
                     <segment>
                         <source>Purl two together</source>
                     </segment>
                 </unit>
-                <unit id="st_n_Slip, slip, knit">
+                <unit id="st_n_ssk">
                     <segment>
                         <source>Slip, slip, knit</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_rib">
+                    <segment>
+                        <source>Rib</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_co">
+                    <segment>
+                        <source>Cast on</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_bo">
+                    <segment>
+                        <source>Bind off</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_m1">
+                    <segment>
+                        <source>Make one stitch</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_d1">
+                    <segment>
+                        <source>Drop one stitch</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_MB">
+                    <segment>
+                        <source>Make bobble</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_C3B">
+                    <segment>
+                        <source>Cross 3 stitches backwards</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_C3F">
+                    <segment>
+                        <source>Cross 3 stitches forward</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_Cr4L">
+                    <segment>
+                        <source>Cross 4 stitches left</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_Cr4R">
+                    <segment>
+                        <source>Cross 4 stitches right</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_dec4">
+                    <segment>
+                        <source>Decrease 4</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_Tw2L">
+                    <segment>
+                        <source>Twist two stitches left</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_Tw2R">
+                    <segment>
+                        <source>Twist two stitches right</source>
                     </segment>
                 </unit>
 
@@ -40,7 +103,6 @@
                 <unit id="st_sh_k">
                     <segment>
                         <source>k</source>
-                        <target>k</target>
                     </segment>
                 </unit>
                 <unit id="st_sh_p">
@@ -68,37 +130,190 @@
                         <source>ssk</source>
                     </segment>
                 </unit>
+                <unit id="st_sh_rib">
+                    <segment>
+                        <source>rib</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_co">
+                    <segment>
+                        <source>co</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_bo">
+                    <segment>
+                        <source>bo</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_m1">
+                    <segment>
+                        <source>m1</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_d1">
+                    <segment>
+                        <source>d1</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_MB">
+                    <segment>
+                        <source>MB</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_C3B">
+                    <segment>
+                        <source>C3B</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_C3F">
+                    <segment>
+                        <source>C3F</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_Cr4L">
+                    <segment>
+                        <source>Cr4L</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_Cr4R">
+                    <segment>
+                        <source>Cr4R</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_dec4">
+                    <segment>
+                        <source>dec4</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_Tw2L">
+                    <segment>
+                        <source>Tw2L</source>
+                    </segment>
+                </unit>
+                <unit id="st_sh_Tw2R">
+                    <segment>
+                        <source>Tw2R</source>
+                    </segment>
+                </unit>
 
             </group>
             <group id="instructions">
-                <unit id="st_ins_1">
+                <unit id="st_ins_k">
                     <segment>
-                        <source>1</source>
+                        <source>Knit one</source>
                     </segment>
                 </unit>
-                <unit id="st_ins_1">
+                <unit id="st_ins_p">
                     <segment>
-                        <source>1</source>
+                        <source>Purl one</source>
                     </segment>
                 </unit>
-                <unit id="st_ins_1">
+                <unit id="st_ins_yo">
                     <segment>
-                        <source>1</source>
+                        <source>Pass yarn over the right needle.</source>
                     </segment>
                 </unit>
-                <unit id="st_ins_1">
+                <unit id="st_ins_k2tog">
                     <segment>
-                        <source>1</source>
+                        <source>With yarn at back, enter your right needle into the first two
+                            stitches in your left needle, from left to right, and knit both at the
+                            same time.</source>
                     </segment>
                 </unit>
-                <unit id="st_ins_1">
+                <unit id="st_ins_p2tog">
                     <segment>
-                        <source>1</source>
+                        <source>With yarn at front, enter your right needle into the first two
+                            stitches in your left needle, from right to left, and purl both at the
+                            same time.</source>
                     </segment>
                 </unit>
-                <unit id="st_ins_1">
+                <unit id="st_ins_ssk">
                     <segment>
-                        <source>1</source>
+                        <source>Slip the first stich onto the right needle. Knit the second stitch,
+                            then pass the first stich over the generated loop.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_rib">
+                    <segment>
+                        <source>K1, P1</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_co">
+                    <segment>
+                        <source>Make a slip knot. Slide slip knot onto needle. Pull yarn to tighten
+                            knot. Wrap the working yarn around your thumb so you have a loop around
+                            your thumb. Bring the needle under and up through the loop around your
+                            thumb. Remove your thumb from the loop and pull the yarn.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_bo">
+                    <segment>
+                        <source>Insert the tip of the left needle into the front of the right-hand
+                            st on the right needle. Lift up and over the left-hand st. Allow st on
+                            the left needle to drop off the needle, leaving just one stitch on the
+                            right needle.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_m1">
+                    <segment>
+                        <source>Pull up a loop from knitted fabric. K1.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_d1">
+                    <segment>
+                        <source> Take st off needle and unravel it until the beginning of the
+                            project.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_MB">
+                    <segment>
+                        <source>Knit into desired st without dropping the loop off the left needle.
+                            Knit same st through back loop, then through front loop.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_C3B">
+                    <segment>
+                        <source>Slip next 2 sts onto cable needle and leave at back of work, K1,
+                            then K2 from cable needle.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_C3F">
+                    <segment>
+                        <source>Slip next st onto cable needle and leave at front of work, K2, then
+                            K1 from cable needle.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_Cr4L">
+                    <segment>
+                        <source>Slip next 2 sts onto cable needle and leave at front of work, P2,
+                            then K2 from cable needle.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_Cr4R">
+                    <segment>
+                        <source>Slip next 2 sts onto cable needle and leave at back of work, K2,
+                            then P2 from cable needle.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_dec4">
+                    <segment>
+                        <source>Slip next 3 sts with yarn at back (WS) of work, *lift second st on
+                            right needle over first (centre) st and off right needle, slip centre st
+                            back onto left needle, lift second st on left needle over centre st*,
+                            slip centre st back onto right needle, rep from * to * once more (4 sts
+                            decreased), K centre st.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_Tw2L">
+                    <segment>
+                        <source>K into back of second st on left needle then K tog through back loop
+                            first and second sts and slip both sts off left needle at same time.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_Tw2R">
+                    <segment>
+                        <source>K2tog leaving sts on left needle, K first st again and slip both sts
+                            off left needle at same time.</source>
                     </segment>
                 </unit>
 

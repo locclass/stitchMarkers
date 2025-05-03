@@ -4,7 +4,7 @@ let names = [];
 let shortHands = [];
 let instructions = [];
 
-fs.createReadStream("./data/stitches.csv")
+fs.createReadStream("docs/data/stitches.csv")
     .pipe(parse({ delimiter: ",", from_line: 2 }))
     .on("data", function (d) {
         let data = Array(d);
@@ -84,16 +84,16 @@ function createInstructionsGroup(ins) {
 }
 
 function createFunctionalGroup(){
-    let fullGroup = `<group id="functional">\n`;
+    // let fullGroup = `<group id="functional">\n`;
 
-    for (let i = 0; i < ins.length; i++) {
-        fullGroup += `<unit id="st_ins_${shortHands[i]}">
-                    <segment>
-                        <source>${ins[i]}</source>
-                    </segment>
-                </unit> \n`;
-    }
+    // for (let i = 0; i < ins.length; i++) {
+    //     fullGroup += `<unit id="st_ins_${shortHands[i]}">
+    //                 <segment>
+    //                     <source>${ins[i]}</source>
+    //                 </segment>
+    //             </unit> \n`;
+    // }
 
-    fullGroup += `\n</group>`;
-    return fullGroup;
+    // fullGroup += `\n</group>`;
+    // return fullGroup;
 }
