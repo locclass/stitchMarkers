@@ -234,14 +234,11 @@
             let fullSt;
             for (let i = 0; i < allStitches.length && !fullSt; i++) {
                 fullSt = allStitches[i].split(';');
-                if (fullSt[1] != stShortHand) fullSt = null;
+                if (fullSt[1].replace("shortHand:","") != stShortHand) fullSt = null;
             }
-            //let fullSt = allStitches.find((st) => st[0] == stName);
-            console.log(fullSt);
 
-            //"{name:" + properties[0] + ";shortHand:" + properties[1] + ";numStitches:" + properties[2] + ";numIncreases:" + properties[3] + ";numDecreases:" + properties[4] + ";instructions:" + properties[5] + "}"
-            let numInc = fullSt[3];
-            let numDec = fullSt[4];
+            let numInc = fullSt[3].replace("numIncreases:","");
+            let numDec = fullSt[4].replace("numDecreases","");
 
             let pTotalSt = document.getElementById("stitchesInRow");
             let pTotalInc = document.getElementById("incInRow");

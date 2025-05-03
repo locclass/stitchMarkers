@@ -15,8 +15,8 @@ const port = 3000;
 app.use(cors());
 
 // Serve static files like CSS and JS
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'data')));
+app.use(express.static(path.join(__dirname, 'docs')));
+app.use(express.static(path.join(__dirname, 'docs/data')));
 
 app.get('/read-csv', (req, res) => {
     const results = [];
@@ -32,30 +32,30 @@ app.get('/read-csv', (req, res) => {
 });
 
 // Serve the HTML page
-app.get('/', (req, res) => {
-    const results = [];
-    const script = require('./public/script');
-    return new Promise((resolve, reject) => {
-        fs.createReadStream(path.join(__dirname, 'data', 'stitches.csv')) // Make sure to place the CSV file in the data folder
-            .on('error', error => {
-                console.log(error)
-                reject(error);
-            }).pipe(csv()) // Parse CSV content
-            .on('data', (data) => {
-                console.table(data);
-                results = results.push(data)
-            })
-            .on('end', () => {
-                console.table(results);
-                console.log("hola")
-                script.loadStitches(results);
-                res.json(results); // Send parsed data as JSON to the client-side
-                resolve(data)
-            });
-        res.sendFile(path.join(__dirname, 'public', 'index.html'));
-    });
+// app.get('/', (req, res) => {
+//     const results = [];
+//     const script = require('./public/script');
+//     return new Promise((resolve, reject) => {
+//         fs.createReadStream(path.join(__dirname, 'data', 'stitches.csv')) // Make sure to place the CSV file in the data folder
+//             .on('error', error => {
+//                 console.log(error)
+//                 reject(error);
+//             }).pipe(csv()) // Parse CSV content
+//             .on('data', (data) => {
+//                 console.table(data);
+//                 results = results.push(data)
+//             })
+//             .on('end', () => {
+//                 console.table(results);
+//                 console.log("hola")
+//                 script.loadStitches(results);
+//                 res.json(results); // Send parsed data as JSON to the client-side
+//                 resolve(data)
+//             });
+//         res.sendFile(path.join(__dirname, 'public', 'index.html'));
+//     });
 
-});
+// });
 
 app.post('/loadStitches', (req, res) => {
     let dropDown = document.getElementById("choose-sel");
