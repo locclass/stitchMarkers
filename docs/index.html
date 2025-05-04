@@ -343,11 +343,11 @@
         function showInstructions() {
             let selectedStitch = document.getElementById("sel-inst").value;
             let splitDefinitions = localStorage.getItem("stitchDefs").split('|');
-
-            for (let i = 0; i < splitDefinitions.length; i++) {
+            let splitStitch;
+            for (let i = 0; i < splitDefinitions.length && splitStitch.length == 0; i++) {
                 if (splitDefinitions[i].includes("shortHand:" + selectedStitch)) {
-                    let splitStitch = splitDefinitions[i].split(';');
-
+                    splitStitch = splitDefinitions[i].split(';');
+                    console.log(splitStitch[5])
                     document.getElementById("divInst").innerHTML = splitStitch[5];
                 }
             }
