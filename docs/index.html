@@ -173,7 +173,7 @@
                     let stitchObject = "name:" + properties[0] + ";shortHand:" + properties[1] + ";numStitches:" + properties[2] + ";numIncreases:" + properties[3] + ";numDecreases:" + properties[4] + ";instructions:" + properties[5];
                     if (i != rows.length - 1) stitchObject += "|";
 
-                    if (localStorage.getItem("stitchDefs") == null) {
+                    if (i == 1) {
                         localStorage.setItem("stitchDefs", stitchObject)
                     } else {
                         localStorage.setItem("stitchDefs", localStorage.getItem("stitchDefs") + stitchObject);
