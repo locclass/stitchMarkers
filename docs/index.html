@@ -344,7 +344,7 @@
             let selectedStitch = document.getElementById("sel-inst").value;
             let splitDefinitions = localStorage.getItem("stitchDefs").split('|');
             let splitStitch;
-            for (let i = 0; i < splitDefinitions.length && splitStitch.length == 0; i++) {
+            for (let i = 0; i < splitDefinitions.length && !splitStitch; i++) {
                 if (splitDefinitions[i].includes("shortHand:" + selectedStitch)) {
                     splitStitch = splitDefinitions[i].split(';');
                     console.log(splitStitch[5])
