@@ -153,29 +153,33 @@
 
         async function getStitchDefinitions() {
             let defsAsStrings;
-            try {
-                let response = await fetch('./data/stitches.csv')
-                    .then(response => response.text())
-                    .then(data => {
-                        defsAsStrings = data;
-                    })
-                    .catch(error => {
-                        console.error('Error fetching CSV:', error);
-                    });
-            } catch (e) {
-                console.error("everything has gone wrong. call the authorities.")
-            }
-            let rows = defsAsStrings.split('\n');
-            for (let i = 1; i < rows.length; i++) {
-                let properties = rows[i].split(',');
-                let stitchObject = "name:" + properties[0] + ";shortHand:" + properties[1] + ";numStitches:" + properties[2] + ";numIncreases:" + properties[3] + ";numDecreases:" + properties[4] + ";instructions:" + properties[5];
-                if (i != rows.length - 1) stitchObject += "|";
-
-                if (localStorage.getItem("stitchDefs") == null) {
-                    localStorage.setItem("stitchDefs", stitchObject)
-                } else {
-                    localStorage.setItem("stitchDefs", localStorage.getItem("stitchDefs") + stitchObject);
+            if (localStorage.getItem("stitchDefs").length == 0) {
+                try {
+                    let response = await fetch('./data/stitches.csv')
+                        .then(response => response.text())
+                        .then(data => {
+                            defsAsStrings = data;
+                        })
+                        .catch(error => {
+                            console.error('Error fetching CSV:', error);
+                        });
+                } catch (e) {
+                    console.error("everything has gone wrong. call the authorities.")
                 }
+                let rows = defsAsStrings.split('\n');
+
+                for (let i = 1; i < rows.length; i++) {
+                    let properties = rows[i].split(',');
+                    let stitchObject = "name:" + properties[0] + ";shortHand:" + properties[1] + ";numStitches:" + properties[2] + ";numIncreases:" + properties[3] + ";numDecreases:" + properties[4] + ";instructions:" + properties[5];
+                    if (i != rows.length - 1) stitchObject += "|";
+
+                    if (localStorage.getItem("stitchDefs") == null) {
+                        localStorage.setItem("stitchDefs", stitchObject)
+                    } else {
+                        localStorage.setItem("stitchDefs", localStorage.getItem("stitchDefs") + stitchObject);
+                    }
+                }
+
             }
 
 
@@ -315,12 +319,13 @@
             let targetDiv = document.getElementById("divInst");
             for (let j = 0; j < stitches.length; j++) {
                 let paragraph = document.createElement("p");
-                let arrayDefs = allDefs.split('|');
+                let arrayDefs = null;
+                arrayDefs = allDefs.split('|');
                 let stitch;
-                arrayDefs.forEach(def => { 
-                    if (def.includes("shortHand:" + stitches[j] + ";")){
+                arrayDefs.forEach(def => {
+                    if (def.includes("shortHand:" + stitches[j] + ";")) {
                         stitch = def;
-                    }  
+                    }
                 })
                 stitch = stitch.split(";");
                 let instructions = stitch[5];
