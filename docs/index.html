@@ -306,7 +306,7 @@
             }
             console.table(stitches);
             console.table(amounts);
-            let allDefs = localStorage.getItem("stitchDefs").split('|');
+            let allDefs = localStorage.getItem("stitchDefs");
             // allDefs = allDefs.forEach(element => {
             //     element = element.split(";");
             // });
@@ -314,8 +314,15 @@
 
             let targetDiv = document.getElementById("divInst");
             for (let j = 0; j < stitches.length; j++) {
-                let paragraph = document.createElement("p")
-                let stitch = allDefs[allDefs.findIndex((item) => item[1].includes("shortHand:" + stitches[j] + ";"))]
+                let paragraph = document.createElement("p");
+                let arrayDefs = allDefs.split('|');
+                let stitch;
+                arrayDefs.forEach(def => { 
+                    if (def.includes("shortHand:" + stitches[j] + ";")){
+                        stitch = def;
+                    }  
+                })
+                stitch = stitch.split(";");
                 let instructions = stitch[5];
                 if (amounts[j] > 1) {
                     instructions = "Repeat *" + instructions + "* " + amounts[j] + " times.";
