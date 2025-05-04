@@ -305,9 +305,9 @@
             }
 
             let allDefs = localStorage.getItem("stitchDefs").split('|');
-            allDefs = allDefs.forEach(element => {
-                element = element.split(";");
-            });
+            // allDefs = allDefs.forEach(element => {
+            //     element = element.split(";");
+            // });
             console.table(allDefs);
 
             let targetDiv = document.getElementById("divInst");
