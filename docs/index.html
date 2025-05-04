@@ -15,7 +15,7 @@
     <div class="container" id="mainContainer">
         <h1 id="title" style="text-align: center;">Stitch Markers</h1>
         <h4 id="slogan" style="text-align: center;">Knitting made easy</h4>
-        <div class="row justify-content-end">
+        <!-- <div class="row justify-content-end">
             <div class="col-3 d-flex align-items-center gap-2">
                 <span>Eng</span>
                 <label class="custom-switch always-on">
@@ -24,7 +24,7 @@
                 </label>
                 <span>Esp</span>
             </div>
-        </div>
+        </div> -->
 
         <div id="divRows" class="container">
             <div class="row" id="row1" style="margin-top: 5px; margin-bottom: 5px;">
@@ -39,8 +39,8 @@
 
         <div id="divInfo">
             <p>
-                <span>See instructions for row </span> <select id="selRowNum">
-                    <option value="1">1</option>
+                <span>See instructions for stitch </span>
+                <select id="sel-inst">
                 </select>
                 <button id="btnConfirmInst">Confirm</button>
             </p>
@@ -84,7 +84,7 @@
         localStorage.setItem("decreaseCount", 0);
         localStorage.setItem("numRows", 1);
         localStorage.setItem("pendingColumn", false);
-        localStorage.setItem("stitchDefs","");
+        localStorage.setItem("stitchDefs", "");
         localStorage.setItem("language", "en-GB");
 
         // html object definitions
@@ -96,7 +96,7 @@
         let btnAddRow;
         let switchLanguage;
         let btnConfirmInst;
-        let selectNumRow;
+        let selectInstructions;
 
         // on load
         document.onload = addListeners(); //myModal
@@ -109,8 +109,8 @@
             btnConfirmStitch = document.getElementById("btnConfirmStitch");
             btnAddRow = document.getElementById("newRowButton");
             switchLanguage = document.getElementById("languageToggle");
-            btnConfirmInst = document.getElementById("btnConfirmInst")
-            selectNumRow = document.getElementById("selRowNum")
+            btnConfirmInst = document.getElementById("btnConfirmInst");
+            selectInstructions = document.getElementById("sel-inst");
 
             addStitchButton.addEventListener('click', openModal);
             btnCloseModal.addEventListener('click', closeModal);
@@ -221,9 +221,10 @@
 
                 let allStitchNames = xmlDoc.querySelectorAll("group[id='stitchNames'] > unit");
                 let selectBox = document.getElementById("choose-sel");
+                let selectInstructions = document.getElementById("sel-inst");
                 let defaultValue = document.createElement("option");
                 defaultValue.value = null;
-                defaultValue.innerHTML = selectedLanguage == "en-GB" ? "Select a stitch" : "Elija una puntada"
+                defaultValue.innerHTML = "Select a stitch"
                 selectBox.appendChild(defaultValue);
                 for (let i = 0; i < allStitchNames.length; i++) {
                     let item = allStitchNames.item(i);
@@ -234,6 +235,7 @@
                         option.value = item.id;
                         option.id = "opt_" + item.id;
                         selectBox.appendChild(option);
+                        selectInstructions.appendChild(option);
                     }
                 }
 
@@ -285,55 +287,68 @@
             }
         }
 
+        // function showInstructions() {
+        //     let row = selectNumRow.value;
+        //     let container = document.getElementById("row" + String(row));
+        //     let stitches = [];
+        //     let amounts = [];
+
+        //     let imgElements = container.getElementsByTagName('img');
+        //     console.table(imgElements);
+        //     for (let i = 0; i < imgElements.length; i++) {
+        //         if (i == 0) {
+        //             stitches.push(getShortHand(imgElements[0].src));
+        //             amounts.push(1);
+        //         } else {
+        //             if (stitches[stitches.length - 1] == getShortHand(imgElements[i].src)) {
+        //                 let currentAmount = parseInt(amounts[amounts.length - 1]);
+        //                 currentAmount++;
+        //                 amounts[amounts.length - 1] = currentAmount;
+        //             } else {
+        //                 stitches.push(imgElements[i].src);
+        //                 amounts.push(1);
+        //             }
+        //         }
+        //     }
+        //     console.table(stitches);
+        //     console.table(amounts);
+        //     let allDefs = localStorage.getItem("stitchDefs");
+        //     // allDefs = allDefs.forEach(element => {
+        //     //     element = element.split(";");
+        //     // });
+
+
+        //     let targetDiv = document.getElementById("divInst");
+        //     for (let j = 0; j < stitches.length; j++) {
+        //         let paragraph = document.createElement("p");
+        //         let arrayDefs = null;
+        //         arrayDefs = allDefs.split('|');
+        //         let stitch;
+        //         arrayDefs.forEach(def => {
+        //             if (def.includes("shortHand:" + stitches[j] + ";")) {
+        //                 stitch = def;
+        //             }
+        //         })
+        //         stitch = stitch.split(";");
+        //         let instructions = stitch[5];
+        //         if (amounts[j] > 1) {
+        //             instructions = "Repeat *" + instructions + "* " + amounts[j] + " times.";
+        //         }
+        //         paragraph.innerHTML = instructions;
+        //         targetDiv.appendChild(paragraph);
+        //     }
+        // }
+
         function showInstructions() {
-            let row = selectNumRow.value;
-            let container = document.getElementById("row" + String(row));
-            let stitches = [];
-            let amounts = [];
+            let selectedStitch = document.getElementById("sel-inst").value;
+            let splitDefinitions = localStorage.getItem("stitchDefs").split('|');
 
-            let imgElements = container.getElementsByTagName('img');
-            console.table(imgElements);
-            for (let i = 0; i < imgElements.length; i++) {
-                if (i == 0) {
-                    stitches.push(getShortHand(imgElements[0].src));
-                    amounts.push(1);
-                } else {
-                    if (stitches[stitches.length - 1] == getShortHand(imgElements[i].src)) {
-                        let currentAmount = parseInt(amounts[amounts.length - 1]);
-                        currentAmount++;
-                        amounts[amounts.length - 1] = currentAmount;
-                    } else {
-                        stitches.push(imgElements[i].src);
-                        amounts.push(1);
-                    }
+            for (let i = 0; i < splitDefinitions; i++) {
+                if (splitDefinitions[i].includes("shortHand:" + selectedStitch)) {
+                    let splitStitch = splitDefinitions[i].split(';');
+
+                    document.getElementById("divInst").innerHTML = splitStitch[5];
                 }
-            }
-            console.table(stitches);
-            console.table(amounts);
-            let allDefs = localStorage.getItem("stitchDefs");
-            // allDefs = allDefs.forEach(element => {
-            //     element = element.split(";");
-            // });
-
-
-            let targetDiv = document.getElementById("divInst");
-            for (let j = 0; j < stitches.length; j++) {
-                let paragraph = document.createElement("p");
-                let arrayDefs = null;
-                arrayDefs = allDefs.split('|');
-                let stitch;
-                arrayDefs.forEach(def => {
-                    if (def.includes("shortHand:" + stitches[j] + ";")) {
-                        stitch = def;
-                    }
-                })
-                stitch = stitch.split(";");
-                let instructions = stitch[5];
-                if (amounts[j] > 1) {
-                    instructions = "Repeat *" + instructions + "* " + amounts[j] + " times.";
-                }
-                paragraph.innerHTML = instructions;
-                targetDiv.appendChild(paragraph);
             }
         }
 
