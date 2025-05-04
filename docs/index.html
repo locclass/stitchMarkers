@@ -140,14 +140,14 @@
 
                 divRows.appendChild(newRow);
             })
-            switchLanguage.addEventListener('click', function () {
-                language = language == "en-GB" ? "esp-LA" : "en-GB";
-                selectBox.innerHTML = null;
-                let option = document.createElement("option");
-                loadStitches(language);
-            })
+            // switchLanguage.addEventListener('click', function () {
+            //     language = language == "en-GB" ? "esp-LA" : "en-GB";
+            //     selectBox.innerHTML = null;
+            //     let option = document.createElement("option");
+            //     loadStitches(language);
+            // })
             btnConfirmInst.addEventListener('click', showInstructions);
-            loadStitches(language);
+            loadStitches();
             getStitchDefinitions();
         }
 
@@ -204,8 +204,8 @@
         }
 
         // load stitches to select box
-        async function loadStitches(selectedLanguage) {
-            let lanOption = selectedLanguage == "en-GB" ? "source" : "target";
+        async function loadStitches() {
+            let lanOption = "en-GB";
             try {
                 const response = await fetch('./stringsTest.xliff', {
                     method: "GET",
