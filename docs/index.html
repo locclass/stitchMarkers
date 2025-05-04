@@ -290,6 +290,7 @@
             let amounts = [];
 
             let imgElements = container.getElementsByTagName('img');
+            console.table(imgElements);
             for (let i = 0; i < imgElements.length; i++) {
                 if (i == 0) {
                     stitches.push(getShortHand(imgElements[0].src));
@@ -303,12 +304,13 @@
                     }
                 }
             }
-
+            consle.table(stitches);
+            console.table(amounts);
             let allDefs = localStorage.getItem("stitchDefs").split('|');
             // allDefs = allDefs.forEach(element => {
             //     element = element.split(";");
             // });
-            console.table(allDefs);
+
 
             let targetDiv = document.getElementById("divInst");
             for (let j = 0; j < stitches.length; j++) {
