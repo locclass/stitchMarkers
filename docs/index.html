@@ -284,6 +284,7 @@
         }
 
         function showInstructions(row) {
+            console.log("in show instructions")
             let container = document.getElementById("row" + String(row));
             let stitches = [];
             let amounts = [];
@@ -304,9 +305,10 @@
             }
 
             let allDefs = localStorage.getItem("stitchDefs").split('|');
-            allDefs.forEach(element => {
+            allDefs = allDefs.forEach(element => {
                 element = element.split(";");
             });
+            console.table(allDefs);
 
             let targetDiv = document.getElementById("divInst");
             for (let j = 0; j < stitches.length; j++) {
