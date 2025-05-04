@@ -146,9 +146,10 @@
             //     let option = document.createElement("option");
             //     loadStitches(language);
             // })
-            btnConfirmInst.addEventListener('click', showInstructions);
+
             loadStitches();
             getStitchDefinitions();
+            btnConfirmInst.addEventListener('click', showInstructions);
         }
 
         async function getStitchDefinitions() {
