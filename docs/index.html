@@ -146,7 +146,7 @@
                 let option = document.createElement("option");
                 loadStitches(language);
             })
-            btnConfirmInst.addEventListener('click', showInstructions(selectNumRow.value));
+            btnConfirmInst.addEventListener('click', showInstructions);
             loadStitches(language);
             getStitchDefinitions();
         }
@@ -283,7 +283,8 @@
             }
         }
 
-        function showInstructions(row) {
+        function showInstructions() {
+            let row = selectNumRow.value;
             console.log("in show instructions")
             let container = document.getElementById("row" + String(row));
             let stitches = [];
