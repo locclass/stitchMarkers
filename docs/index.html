@@ -35,12 +35,22 @@
                 <button id="btnConfirmInst">Confirm</button>
             </p>
             <div id="divInst"></div>
-            <label for="stitchesInRow">Total stitches in row: </label>
-            <p id="stitchesInRow"></p>
-            <label for="incInRow">Num. increases in row: </label>
-            <p id="incInRow"></p>
-            <label for="decsInRow">Num. decreases in row: </label>
-            <p id="decsInRow"></p>
+
+            <div>
+                <label for="stitchesInRow">Total stitches: </label>
+                <span id="stitchesInRow"></span>
+            </div>
+
+            <div>
+                <label for="incInRow">Num. increases: </label>
+                <span id="incInRow"></span>
+            </div>
+
+            <div>
+                <label for="decsInRow">Num. decreases: </label>
+                <span id="decsInRow"></span>
+            </div>
+
         </div>
         <div id="myModal" class="modal">
             <div class="modal-content">
@@ -330,12 +340,12 @@
                 if (currentSt.includes(String("shortHand:" + selectedStitch))) {
                     splitStitch = currentSt.split(';');
                     let instructions = String(splitStitch[5]).replace("instructions:", "");
-                    instructions = instructions.replace('"', "");
+                    instructions = instructions.replace('"', '');
                     document.getElementById("divInst").innerHTML = instructions;
 
                     document.getElementById("stitchesInRow").innerHTML = String(splitStitch[2]).replace("numStitches:", "");
-                    document.getElementById("incInRow").innerHTML = String(splitStitch[2]).replace("numIncreases:", "");
-                    document.getElementById("decInRow").innerHTML = String(splitStitch[2]).replace("numDecreases:", "");
+                    document.getElementById("incInRow").innerHTML = String(splitStitch[3]).replace("numIncreases:", "");
+                    document.getElementById("decsInRow").innerHTML = String(splitStitch[4]).replace("numDecreases:", "");
                 }
             }
         }
