@@ -202,16 +202,19 @@
                     let item = allStitchNames.item(i);
 
                     if (document.querySelector(`option[value='${item.id}]`) == null) {
+                        let value = item.id;
+                        let id = "opt_" + value;
+                        let innerText = item.querySelector("source").innerHTML;
                         let option = document.createElement("option");
-                        option.innerHTML = item.querySelector("source").innerHTML;
-                        option.value = item.id;
-                        option.id = "opt_" + item.id;
+                        option.innerHTML = innerText;
+                        option.value = value;
+                        option.id = id
                         selectBox.appendChild(option.cloneNode());
 
                         let option2 = document.createElement("option");
-                        option2.innerHTML = item.querySelector("source").innerHTML;
-                        option2.value = item.id;
-                        option2.id = "opt_" + item.id;
+                        option2.innerHTML = innerText;
+                        option2.value = value;
+                        option2.id = id;
                         selectInstructions.appendChild(option2.cloneNode());
                     }
                 }
