@@ -206,13 +206,13 @@
                         let id = "opt_" + value;
                         let innerText = item.querySelector("source").innerHTML;
                         let option = document.createElement("option");
-                        option.innerHTML = innerText;
+                        option.innerText = innerText;
                         option.value = value;
-                        option.id = id
+                        option.id = id;
                         selectBox.appendChild(option.cloneNode());
 
                         let option2 = document.createElement("option");
-                        option2.innerHTML = innerText;
+                        option2.innerText = innerText;
                         option2.value = value;
                         option2.id = id;
                         selectInstructions.appendChild(option2.cloneNode());
