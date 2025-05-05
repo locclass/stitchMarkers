@@ -209,9 +209,9 @@
                         selectBox.appendChild(option.cloneNode());
 
                         let option2 = document.createElement("option");
-                        option.innerHTML = item.querySelector("source").innerHTML;
-                        option.value = item.id;
-                        option.id = "opt_" + item.id;
+                        option2.innerHTML = item.querySelector("source").innerHTML;
+                        option2.value = item.id;
+                        option2.id = "opt_" + item.id;
                         selectInstructions.appendChild(option2.cloneNode());
                     }
                 }
