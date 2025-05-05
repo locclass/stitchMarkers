@@ -15,16 +15,6 @@
     <div class="container" id="mainContainer">
         <h1 id="title" style="text-align: center;">Stitch Markers</h1>
         <h4 id="slogan" style="text-align: center;">Knitting made easy</h4>
-        <!-- <div class="row justify-content-end">
-            <div class="col-3 d-flex align-items-center gap-2">
-                <span>Eng</span>
-                <label class="custom-switch always-on">
-                    <input type="checkbox" class="visually-hidden" id="languageToggle">
-                    <span class="slider"></span>
-                </label>
-                <span>Esp</span>
-            </div>
-        </div> -->
 
         <div id="divRows" class="container">
             <div class="row" id="row1" style="margin-top: 5px; margin-bottom: 5px;">
@@ -75,17 +65,13 @@
         let stitchCount = parseInt(0);
         let increaseCount = 0;
         let decreaseCount = 0;
-        var pendingColumn = false;
         let numRows = 1;
         let stitchDefs = [];
-        let language = "en-GB";
         localStorage.setItem("stitchCount", 0);
         localStorage.setItem("increaseCount", 0);
         localStorage.setItem("decreaseCount", 0);
         localStorage.setItem("numRows", 1);
-        localStorage.setItem("pendingColumn", false);
         localStorage.setItem("stitchDefs", "");
-        localStorage.setItem("language", "en-GB");
 
         // html object definitions
         let modal;
@@ -94,7 +80,6 @@
         let addStitchButton;
         let btnConfirmStitch;
         let btnAddRow;
-        let switchLanguage;
         let btnConfirmInst;
         let selectInstructions;
 
@@ -108,7 +93,6 @@
             addStitchButton = document.getElementById('addStitchButton');
             btnConfirmStitch = document.getElementById("btnConfirmStitch");
             btnAddRow = document.getElementById("newRowButton");
-            switchLanguage = document.getElementById("languageToggle");
             btnConfirmInst = document.getElementById("btnConfirmInst");
             selectInstructions = document.getElementById("sel-inst");
 
@@ -132,20 +116,8 @@
                 newRow.className = 'row';
                 newRow.style = 'margin-top: 5px; margin-bottom: 5px;';
 
-                // add row number
-                // let spanNum = document.createElement('span');
-                // spanNum.style = 'width: min-content;'
-                // spanNum.innerText = numRows;
-                // newRow.appendChild(spanNum);
-
                 divRows.appendChild(newRow);
             })
-            // switchLanguage.addEventListener('click', function () {
-            //     language = language == "en-GB" ? "esp-LA" : "en-GB";
-            //     selectBox.innerHTML = null;
-            //     let option = document.createElement("option");
-            //     loadStitches(language);
-            // })
 
             loadStitches();
             getStitchDefinitions();
@@ -192,7 +164,6 @@
         }
 
         function openModal() {
-            pendingColumn = true;
             modal.style.display = "block";
 
             let stitchList = [];
@@ -235,8 +206,8 @@
                         option.innerHTML = item.querySelector("source").innerHTML;
                         option.value = item.id;
                         option.id = "opt_" + item.id;
-                        selectBox.appendChild(option);
-                        selectInstructions.appendChild(option);
+                        selectBox.appendChild(option.cloneNode());
+                        selectInstructions.appendChild(option.cloneNode());
                     }
                 }
 
@@ -345,13 +316,18 @@
             selectedStitch = selectedStitch.replace("st_n_", "");
             let splitDefinitions = localStorage.getItem("stitchDefs").split('|');
             let splitStitch;
-            
+
             for (let i = 0; i < splitDefinitions.length && !splitStitch; i++) {
                 let currentSt = String(splitDefinitions[i]);
                 if (currentSt.includes(String("shortHand:" + selectedStitch))) {
                     splitStitch = currentSt.split(';');
-                    console.log(splitStitch[5])
-                    document.getElementById("divInst").innerHTML = splitStitch[5];
+                    let instructions = String(splitStitch[5]).replace("instructions:","");
+                    instructions = instructions.replace('"',"");
+                    document.getElementById("divInst").innerHTML = instructions;
+
+                    document.getElementById("stitchesInRow").innerHTML = String(splitStitch[2]).replace("numStitches:","");
+                    document.getElementById("incInRow").innerHTML = String(splitStitch[2]).replace("numIncreases:","");
+                    document.getElementById("decInRow").innerHTML = String(splitStitch[2]).replace("numDecreases:","");
                 }
             }
         }
