@@ -206,8 +206,9 @@
                         option.innerHTML = item.querySelector("source").innerHTML;
                         option.value = item.id;
                         option.id = "opt_" + item.id;
+                        let option2 = option.cloneNode();
                         selectBox.appendChild(option.cloneNode());
-                        selectInstructions.appendChild(option.cloneNode());
+                        selectInstructions.appendChild(option2.cloneNode());
                     }
                 }
 
