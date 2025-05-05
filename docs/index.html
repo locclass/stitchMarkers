@@ -342,11 +342,13 @@
 
         function showInstructions() {
             let selectedStitch = document.getElementById("sel-inst").value;
+            selectedStitch = selectedStitch.replace("st_n_", "");
             let splitDefinitions = localStorage.getItem("stitchDefs").split('|');
             let splitStitch;
+            
             for (let i = 0; i < splitDefinitions.length && !splitStitch; i++) {
                 let currentSt = String(splitDefinitions[i]);
-                if (currentSt.includes("shortHand:" + selectedStitch)) {
+                if (currentSt.includes(String("shortHand:" + selectedStitch))) {
                     splitStitch = currentSt.split(';');
                     console.log(splitStitch[5])
                     document.getElementById("divInst").innerHTML = splitStitch[5];
