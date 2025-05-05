@@ -206,8 +206,12 @@
                         option.innerHTML = item.querySelector("source").innerHTML;
                         option.value = item.id;
                         option.id = "opt_" + item.id;
-                        let option2 = option.cloneNode();
                         selectBox.appendChild(option.cloneNode());
+
+                        let option2 = document.createElement("option");
+                        option.innerHTML = item.querySelector("source").innerHTML;
+                        option.value = item.id;
+                        option.id = "opt_" + item.id;
                         selectInstructions.appendChild(option2.cloneNode());
                     }
                 }
@@ -322,13 +326,13 @@
                 let currentSt = String(splitDefinitions[i]);
                 if (currentSt.includes(String("shortHand:" + selectedStitch))) {
                     splitStitch = currentSt.split(';');
-                    let instructions = String(splitStitch[5]).replace("instructions:","");
-                    instructions = instructions.replace('"',"");
+                    let instructions = String(splitStitch[5]).replace("instructions:", "");
+                    instructions = instructions.replace('"', "");
                     document.getElementById("divInst").innerHTML = instructions;
 
-                    document.getElementById("stitchesInRow").innerHTML = String(splitStitch[2]).replace("numStitches:","");
-                    document.getElementById("incInRow").innerHTML = String(splitStitch[2]).replace("numIncreases:","");
-                    document.getElementById("decInRow").innerHTML = String(splitStitch[2]).replace("numDecreases:","");
+                    document.getElementById("stitchesInRow").innerHTML = String(splitStitch[2]).replace("numStitches:", "");
+                    document.getElementById("incInRow").innerHTML = String(splitStitch[2]).replace("numIncreases:", "");
+                    document.getElementById("decInRow").innerHTML = String(splitStitch[2]).replace("numDecreases:", "");
                 }
             }
         }
