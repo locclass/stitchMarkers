@@ -345,8 +345,9 @@
             let splitDefinitions = localStorage.getItem("stitchDefs").split('|');
             let splitStitch;
             for (let i = 0; i < splitDefinitions.length && !splitStitch; i++) {
-                if (splitDefinitions[i].includes("shortHand:" + selectedStitch)) {
-                    splitStitch = splitDefinitions[i].split(';');
+                let currentSt = String(splitDefinitions[i]);
+                if (currentSt.includes("shortHand:" + selectedStitch)) {
+                    splitStitch = currentSt.split(';');
                     console.log(splitStitch[5])
                     document.getElementById("divInst").innerHTML = splitStitch[5];
                 }
