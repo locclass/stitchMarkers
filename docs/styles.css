@@ -76,6 +76,11 @@ body {
     justify-content: right;
 }
 
+#divInstructions {
+    margin-top: 10px;
+    border-top: 2px dashed #bf9fac;
+}
+
 button {
     width: max-content;
     border-radius: 5px !important;

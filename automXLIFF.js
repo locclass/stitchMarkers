@@ -5,7 +5,7 @@ let shortHands = [];
 let instructions = [];
 
 fs.createReadStream("docs/data/stitches.csv")
-    .pipe(parse({ delimiter: ",", from_line: 2 }))
+    .pipe(parse({ delimiter: ";", from_line: 2 }))
     .on("data", function (d) {
         let data = Array(d);
 

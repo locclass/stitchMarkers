@@ -17,7 +17,7 @@
         <h4 id="slogan" style="text-align: center;">Knitting made easy</h4>
 
         <div id="divRows" class="container">
-            <div class="row" id="row1" style="margin-top: 5px; margin-bottom: 5px;">
+            <div class="row" id="row1" style="margin-top: 5px; margin-bottom: 5px; background-color: #fce6ef;">
                 <span style="width: min-content; height: 50px; line-height: 50px; display: none;">1</span>
             </div>
         </div>
@@ -27,7 +27,7 @@
             <button id="newRowButton">Add new row</button>
         </div>
 
-        <div id="divInfo">
+        <div id="divInfo" class="divInstructions">
             <p>
                 <span>See instructions for stitch </span>
                 <select id="sel-inst">
@@ -124,12 +124,12 @@
                 let newRow = document.createElement('div');
                 newRow.id = ('row' + numRows).toString();
                 newRow.className = 'row';
-                newRow.style = 'margin-top: 5px; margin-bottom: 5px;';
+                newRow.style = 'margin-top: 5px; margin-bottom: 5px; background-color: #fce6ef;';
 
                 divRows.appendChild(newRow);
             })
 
-            loadStitches();
+            loadStitches('./stringsTest.xliff');
             getStitchDefinitions();
             btnConfirmInst.addEventListener('click', showInstructions);
         }
@@ -152,7 +152,7 @@
                 let rows = defsAsStrings.split('\n');
 
                 for (let i = 1; i < rows.length; i++) {
-                    let properties = rows[i].split(',');
+                    let properties = rows[i].split(';');
                     let stitchObject = "name:" + properties[0] + ";shortHand:" + properties[1] + ";numStitches:" + properties[2] + ";numIncreases:" + properties[3] + ";numDecreases:" + properties[4] + ";instructions:" + properties[5];
                     if (i != rows.length - 1) stitchObject += "|";
 
@@ -186,10 +186,10 @@
         }
 
         // load stitches to select box
-        async function loadStitches() {
+        async function loadStitches(xliffPath) {
             let lanOption = "en-GB";
             try {
-                const response = await fetch('./stringsTest.xliff', {
+                const response = await fetch(xliffPath, {
                     method: "GET",
                     mode: "cors",
                     headers: {

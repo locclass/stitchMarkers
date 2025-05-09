@@ -29,7 +29,7 @@
                 </unit>
                 <unit id="st_n_ssk">
                     <segment>
-                        <source>Slip slip knit</source>
+                        <source>Slip, slip, knit</source>
                     </segment>
                 </unit>
                 <unit id="st_n_rib">
@@ -95,36 +95,6 @@
                 <unit id="st_n_Tw2R">
                     <segment>
                         <source>Twist two stitches right</source>
-                    </segment>
-                </unit>
-                <unit id="st_n_k-b">
-                    <segment>
-                        <source>Knit stitch in row below</source>
-                    </segment>
-                </unit>
-                <unit id="st_n_p-b">
-                    <segment>
-                        <source>Purl stitch in row below</source>
-                    </segment>
-                </unit>
-                <unit id="st_n_kfb">
-                    <segment>
-                        <source>Knit front and back</source>
-                    </segment>
-                </unit>
-                <unit id="st_n_skl">
-                    <segment>
-                        <source>Slip, knit, lift</source>
-                    </segment>
-                </unit>
-                <unit id="st_n_kll">
-                    <segment>
-                        <source>Knit left loop</source>
-                    </segment>
-                </unit>
-                <unit id="st_n_M1PL">
-                    <segment>
-                        <source>Make one purl left</source>
                     </segment>
                 </unit>
 
@@ -225,36 +195,6 @@
                         <source>Tw2R</source>
                     </segment>
                 </unit>
-                <unit id="st_sh_k-b">
-                    <segment>
-                        <source>k-b</source>
-                    </segment>
-                </unit>
-                <unit id="st_sh_p-b">
-                    <segment>
-                        <source>p-b</source>
-                    </segment>
-                </unit>
-                <unit id="st_sh_kfb">
-                    <segment>
-                        <source>kfb</source>
-                    </segment>
-                </unit>
-                <unit id="st_sh_skl">
-                    <segment>
-                        <source>skl</source>
-                    </segment>
-                </unit>
-                <unit id="st_sh_kll">
-                    <segment>
-                        <source>kll</source>
-                    </segment>
-                </unit>
-                <unit id="st_sh_M1PL">
-                    <segment>
-                        <source>M1PL</source>
-                    </segment>
-                </unit>
 
             </group>
             <group id="instructions">
@@ -321,7 +261,8 @@
                 </unit>
                 <unit id="st_ins_d1">
                     <segment>
-                        <source>Take st off needle and unravel until beginning of project.</source>
+                        <source> Take st off needle and unravel it until the beginning of the
+                            project.</source>
                     </segment>
                 </unit>
                 <unit id="st_ins_MB">
@@ -373,45 +314,6 @@
                     <segment>
                         <source>K2tog leaving sts on left needle, K first st again and slip both sts
                             off left needle at same time.</source>
-                    </segment>
-                </unit>
-                <unit id="st_ins_k-b">
-                    <segment>
-                        <source>Insert needle into loop below the first stitch on left needle. Wrap
-                            yarn around needle counter-clockwise. Pull yarn through towards the
-                            front. Drop stitch off left needle.</source>
-                    </segment>
-                </unit>
-                <unit id="st_ins_p-b">
-                    <segment>
-                        <source>Bring yarn to front and enter loop below next purl stitch from
-                            behind. Wrap yarn around needle counter-clockwise. Pull yarn through.
-                            Drop resulting stitch off left needle.</source>
-                    </segment>
-                </unit>
-                <unit id="st_ins_kfb">
-                    <segment>
-                        <source>K1 without slipping to right needle. Insert needle into back loop of
-                            same st from right to left. YO, pull yarn through and drop st.</source>
-                    </segment>
-                </unit>
-                <unit id="st_ins_skl">
-                    <segment>
-                        <source>Slip 1 knitwise. Slip same st onto left needle purlwise. K1. Lift
-                            right leg of st one row below and pass to left needle. K1 tbl.</source>
-                    </segment>
-                </unit>
-                <unit id="st_ins_kll">
-                    <segment>
-                        <source>Insert left needle from the back into st two rows below. Pick up
-                            left leg of st and pass to left needle. K tbl.</source>
-                    </segment>
-                </unit>
-                <unit id="st_ins_M1PL">
-                    <segment>
-                        <source>From the front, pick up strand between two sts and lift to left
-                            needle. Insert right needle tbl. Yarn is in front of work. YO and pull
-                            through.</source>
                     </segment>
                 </unit>
 
