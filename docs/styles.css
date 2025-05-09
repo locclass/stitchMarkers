@@ -49,7 +49,7 @@ body {
     margin: 50px;
     border: 20px solid #3a3840;
     border-radius: 20px;
-    min-height: 500px;
+    height: 500px;
     max-width: 800px;
     background-color: #fcd7e6;
 }
