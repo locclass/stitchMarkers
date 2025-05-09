@@ -124,7 +124,7 @@
                 let newRow = document.createElement('div');
                 newRow.id = ('row' + numRows).toString();
                 newRow.className = 'row';
-                newRow.style = 'margin-top: 5px; margin-bottom: 5px; background-color: #fce6ef;';
+                newRow.style = 'margin-top: 5px; margin-bottom: 5px; background-color: #fce6ef; height: 50px;';
 
                 divRows.appendChild(newRow);
             })
@@ -245,28 +245,28 @@
                 if (fullSt[1].replace("shortHand:", "") != stShortHand) fullSt = null;
             }
 
-            let numInc = fullSt[3].replace("numIncreases:", "");
-            let numDec = fullSt[4].replace("numDecreases", "");
+            // let numInc = fullSt[3].replace("numIncreases:", "");
+            // let numDec = fullSt[4].replace("numDecreases", "");
 
-            let pTotalSt = document.getElementById("stitchesInRow");
-            let pTotalInc = document.getElementById("incInRow");
-            let pTotalDec = document.getElementById("decsInRow");
-            pTotalSt.innerHTML = null;
-            pTotalSt.innerHTML = parseInt(stitchCount);
+            // let pTotalSt = document.getElementById("stitchesInRow");
+            // let pTotalInc = document.getElementById("incInRow");
+            // let pTotalDec = document.getElementById("decsInRow");
+            // pTotalSt.innerHTML = null;
+            // pTotalSt.innerHTML = parseInt(stitchCount);
 
-            if (numInc != 0) {
-                localStorage.setItem("stitchCount", Number(localStorage.getItem("stitchCount")) + numReps * numInc);
-                stitchCount += numReps * numInc;
-                increaseCount += numReps * numInc;
-                pTotalInc.innerHTML = null;
-                pTotalInc.innerHTML = parseInt(increaseCount);
-            }
-            if (numDec != 0) {
-                stitchCount += numReps * numDec;
-                decreaseCount += numReps * numDec;
-                pTotalDec.innerHTML = null;
-                pTotalDec.innerHTML = parseInt(decreaseCount);
-            }
+            // if (numInc != 0) {
+            //     localStorage.setItem("stitchCount", Number(localStorage.getItem("stitchCount")) + numReps * numInc);
+            //     stitchCount += numReps * numInc;
+            //     increaseCount += numReps * numInc;
+            //     pTotalInc.innerHTML = null;
+            //     pTotalInc.innerHTML = parseInt(increaseCount);
+            // }
+            // if (numDec != 0) {
+            //     stitchCount += numReps * numDec;
+            //     decreaseCount += numReps * numDec;
+            //     pTotalDec.innerHTML = null;
+            //     pTotalDec.innerHTML = parseInt(decreaseCount);
+            // }
 
             let activeRow = document.getElementById(('row' + numRows).toString());
             let img = document.createElement("img");
