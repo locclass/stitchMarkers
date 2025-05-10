@@ -8,12 +8,15 @@
         ::-webkit-scrollbar {
             width: 10px;
         }
+
         ::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: #fcd7e6;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #888;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
@@ -27,8 +30,31 @@
 
 <body>
     <div class="container" id="mainContainer" style="overflow-y: scroll;">
-        <h1 id="title" style="text-align: center;">Stitch Markers</h1>
-        <h4 id="slogan" style="text-align: center;">Knitting made easy</h4>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid row">
+                <div class="col-6">
+                    <h1 id="title" style="text-align: center;">Stitch Markers</h1>
+                    <h4 id="slogan" style="text-align: center;">Knitting made easy</h4>
+                </div>
+                <div class="col">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Translations
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Camila</a></li>
+                        <li><a class="dropdown-item" href="#">Evangelina</a></li>
+                        <li><a class="dropdown-item" href="#">Guidaí</a></li>
+                        <li><a class="dropdown-item" href="#">Juan Manuel</a></li>
+                        <li><a class="dropdown-item" href="#">Julieta</a></li>
+                        <li><a class="dropdown-item" href="#">Ornella</a></li>
+                        <li><a class="dropdown-item" href="#">Paula</a></li>
+                    </ul>
+                </div>
+                <a class="navbar-brand" href="#">Default</a>
+            </div>
+        </nav>
+
 
         <div id="divRows" class="container">
             <div class="row" id="row1"
@@ -43,7 +69,7 @@
         </div>
 
         <div id="divInfo" class="divInstructions"
-            style="margin-top: 20px; padding-top:20px; border-top: 2px dashed #bf9fac;">
+            style="margin-top: 20px; margin-bottom: 20px; padding-top:20px; border-top: 2px dashed #bf9fac;">
             <p>
                 <span>See instructions for stitch </span>
                 <select id="sel-inst">
@@ -109,8 +135,7 @@
         let btnConfirmInst;
         let selectInstructions;
 
-        // on load
-        document.onload = addListeners(); //myModal
+        document.onload = addListeners();
 
         function addListeners() {
             modal = document.getElementById("myModal");
@@ -184,23 +209,6 @@
 
         }
 
-        // open and close modal
-        function closeModal() {
-            if (modal.style.display != 'none') modal.style.display = 'none';
-        }
-
-        function openModal() {
-            modal.style.display = "block";
-
-            let stitchList = [];
-            for (let i = 0; i < 5; i++) {
-                stitchList.push(stitchDefs[0])
-            }
-            for (let i = 0; i < 2; i++) {
-                stitchList.push(stitchDefs[3])
-            }
-        }
-
         // load stitches to select box
         async function loadStitches(xliffPath) {
             let lanOption = "en-GB";
@@ -261,29 +269,6 @@
                 if (fullSt[1].replace("shortHand:", "") != stShortHand) fullSt = null;
             }
 
-            // let numInc = fullSt[3].replace("numIncreases:", "");
-            // let numDec = fullSt[4].replace("numDecreases", "");
-
-            // let pTotalSt = document.getElementById("stitchesInRow");
-            // let pTotalInc = document.getElementById("incInRow");
-            // let pTotalDec = document.getElementById("decsInRow");
-            // pTotalSt.innerHTML = null;
-            // pTotalSt.innerHTML = parseInt(stitchCount);
-
-            // if (numInc != 0) {
-            //     localStorage.setItem("stitchCount", Number(localStorage.getItem("stitchCount")) + numReps * numInc);
-            //     stitchCount += numReps * numInc;
-            //     increaseCount += numReps * numInc;
-            //     pTotalInc.innerHTML = null;
-            //     pTotalInc.innerHTML = parseInt(increaseCount);
-            // }
-            // if (numDec != 0) {
-            //     stitchCount += numReps * numDec;
-            //     decreaseCount += numReps * numDec;
-            //     pTotalDec.innerHTML = null;
-            //     pTotalDec.innerHTML = parseInt(decreaseCount);
-            // }
-
             let activeRow = document.getElementById(('row' + numRows).toString());
             let img = document.createElement("img");
             img.src = "symbols/" + fullSt[1].replace("shortHand:", "") + ".jpg";
@@ -292,58 +277,6 @@
                 document.getElementById(activeRow.id).appendChild(img.cloneNode())
             }
         }
-
-        // function showInstructions() {
-        //     let row = selectNumRow.value;
-        //     let container = document.getElementById("row" + String(row));
-        //     let stitches = [];
-        //     let amounts = [];
-
-        //     let imgElements = container.getElementsByTagName('img');
-        //     console.table(imgElements);
-        //     for (let i = 0; i < imgElements.length; i++) {
-        //         if (i == 0) {
-        //             stitches.push(getShortHand(imgElements[0].src));
-        //             amounts.push(1);
-        //         } else {
-        //             if (stitches[stitches.length - 1] == getShortHand(imgElements[i].src)) {
-        //                 let currentAmount = parseInt(amounts[amounts.length - 1]);
-        //                 currentAmount++;
-        //                 amounts[amounts.length - 1] = currentAmount;
-        //             } else {
-        //                 stitches.push(imgElements[i].src);
-        //                 amounts.push(1);
-        //             }
-        //         }
-        //     }
-        //     console.table(stitches);
-        //     console.table(amounts);
-        //     let allDefs = localStorage.getItem("stitchDefs");
-        //     // allDefs = allDefs.forEach(element => {
-        //     //     element = element.split(";");
-        //     // });
-
-
-        //     let targetDiv = document.getElementById("divInst");
-        //     for (let j = 0; j < stitches.length; j++) {
-        //         let paragraph = document.createElement("p");
-        //         let arrayDefs = null;
-        //         arrayDefs = allDefs.split('|');
-        //         let stitch;
-        //         arrayDefs.forEach(def => {
-        //             if (def.includes("shortHand:" + stitches[j] + ";")) {
-        //                 stitch = def;
-        //             }
-        //         })
-        //         stitch = stitch.split(";");
-        //         let instructions = stitch[5];
-        //         if (amounts[j] > 1) {
-        //             instructions = "Repeat *" + instructions + "* " + amounts[j] + " times.";
-        //         }
-        //         paragraph.innerHTML = instructions;
-        //         targetDiv.appendChild(paragraph);
-        //     }
-        // }
 
         function showInstructions() {
             let selectedStitch = document.getElementById("sel-inst").value;
@@ -373,27 +306,21 @@
             return str;
         }
 
-        function findPattern(stitchList) {
-            let patterns = [];
-            let i = 0;
-            while (i < stitchList.length) {
-                if (stitchList[i].shortHand == stitchList[i + 1].shortHand) {
-                    if (patterns.length == 0 || patterns[patterns.length - 1].shortHand != stitchList[i].shortHand) {
-                        patterns.push({
-                            'name': stitchList[i].name,
-                            'count': parseInt(2),
-                            'start': i,
-                            'end': parseInt(i + 1)
-                        });
-                    } else if (patterns.length != 0 && patterns[patterns.length - 1].name == stitchList[i].name) {
-                        patterns[patterns.length - 1].count = parseInt(patterns[patterns.length - 1].count + 1);
-                        patterns[patterns.length - 1].end = parseInt(i + 1);
-                    }
-                }
-            }
-            return patterns;
+        function closeModal() {
+            if (modal.style.display != 'none') modal.style.display = 'none';
         }
 
+        function openModal() {
+            modal.style.display = "block";
+
+            let stitchList = [];
+            for (let i = 0; i < 5; i++) {
+                stitchList.push(stitchDefs[0])
+            }
+            for (let i = 0; i < 2; i++) {
+                stitchList.push(stitchDefs[3])
+            }
+        }
 
 
     </script>
