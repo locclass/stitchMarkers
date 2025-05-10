@@ -127,9 +127,8 @@
                         <source>Make one purl left</source>
                     </segment>
                 </unit>
-
             </group>
-            <group id="shortHands">
+            <!-- <group id="shortHands">
                 <unit id="st_sh_k">
                     <segment>
                         <source>k</source>
@@ -255,8 +254,7 @@
                         <source>M1PL</source>
                     </segment>
                 </unit>
-
-            </group>
+            </group> -->
             <group id="instructions">
                 <unit id="st_ins_k">
                     <segment>

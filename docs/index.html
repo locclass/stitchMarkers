@@ -51,7 +51,6 @@
                         <li><a class="dropdown-item" href="#">Paula</a></li>
                     </ul>
                 </div>
-                <a class="navbar-brand" href="#">Default</a>
             </div>
         </nav>
 
@@ -78,7 +77,7 @@
             </p>
             <div id="divInst"></div>
 
-            <div style="margin-top: 10px;">
+            <!-- <div style="margin-top: 10px;">
                 <label for="stitchesInRow" style="font-weight: bold;">Total stitches: </label>
                 <span id="stitchesInRow"></span>
             </div>
@@ -91,7 +90,7 @@
             <div>
                 <label for="decsInRow" style="font-weight: bold;">Num. decreases: </label>
                 <span id="decsInRow"></span>
-            </div>
+            </div> -->
 
         </div>
         <div id="myModal" class="modal">
@@ -114,14 +113,14 @@
 
 
     <script type="module">
-        let stitchCount = parseInt(0);
-        let increaseCount = 0;
-        let decreaseCount = 0;
+        // let stitchCount = parseInt(0);
+        // let increaseCount = 0;
+        // let decreaseCount = 0;
         let numRows = 1;
         let stitchDefs = [];
-        localStorage.setItem("stitchCount", 0);
-        localStorage.setItem("increaseCount", 0);
-        localStorage.setItem("decreaseCount", 0);
+        // localStorage.setItem("stitchCount", 0);
+        // localStorage.setItem("increaseCount", 0);
+        // localStorage.setItem("decreaseCount", 0);
         localStorage.setItem("numRows", 1);
         localStorage.setItem("stitchDefs", "");
 
@@ -151,7 +150,7 @@
             btnCloseModal.addEventListener('click', closeModal);
             btnConfirmStitch.addEventListener('click', function () {
                 let numReps = document.getElementById("numReps").value
-                stitchCount += parseInt(numReps);
+                //stitchCount += parseInt(numReps);
                 addStitchToRow(selectBox.value, parseInt(numReps));
                 document.getElementById("numReps").value = 1;
                 closeModal();
@@ -170,8 +169,9 @@
                 divRows.appendChild(newRow);
             })
 
-            loadStitches('./stringsTest.xliff');
-            getStitchDefinitions();
+            loadStitchesFromFile('strings/defaultStrings.xliff');
+            loadStitchesToBoxes();
+            //getStitchDefinitions();
             btnConfirmInst.addEventListener('click', showInstructions);
         }
 
@@ -179,7 +179,7 @@
             let defsAsStrings;
             if (localStorage.getItem("stitchDefs").length == 0) {
                 try {
-                    let response = await fetch('./data/stitches.csv')
+                    let response = await fetch('./data/defaultStitches.csv')
                         .then(response => response.text())
                         .then(data => {
                             defsAsStrings = data;
@@ -210,8 +210,14 @@
         }
 
         // load stitches to select box
-        async function loadStitches(xliffPath) {
-            let lanOption = "en-GB";
+        async function loadStitchesFromFile(xliffPath) {
+            let lanOption;
+            if (xliffPath == "strings/defaultStrings.xliff") {
+                lanOption = "source"
+            } else {
+                lanOption = "target"
+            }
+
             try {
                 const response = await fetch(xliffPath, {
                     method: "GET",
@@ -226,52 +232,65 @@
                 const xmlDoc = parser.parseFromString(xmlString, 'application/xml');
 
                 let allStitchNames = xmlDoc.querySelectorAll("group[id='stitchNames'] > unit");
-                let selectBox = document.getElementById("choose-sel");
-                let selectInstructions = document.getElementById("sel-inst");
-                let defaultValue = document.createElement("option");
-                defaultValue.value = null;
-                defaultValue.innerHTML = "Select a stitch"
-                selectBox.appendChild(defaultValue);
+                let allInstructions = xmlDoc.querySelectorAll("group[id='instructions'] > unit");
+
+                let strToStore = "";
+
                 for (let i = 0; i < allStitchNames.length; i++) {
-                    let item = allStitchNames.item(i);
+                    let nameUnit = allStitchNames.item(i);
+                    let instUnit = allInstructions.item(i);
 
-                    if (document.querySelector(`option[value='${item.id}]`) == null) {
-                        let value = item.id;
-                        let id = "opt_" + value;
-                        let innerText = item.querySelector("source").innerHTML;
-                        let option = document.createElement("option");
-                        option.innerText = innerText;
-                        option.value = value;
-                        option.id = id;
-                        selectBox.appendChild(option);
+                    let shortHand = String(nameUnit.id).replace("st_n_", "");
+                    let name = nameUnit.querySelector(String(lanOption)).innerHTML;
+                    let inst = instUnit.querySelector(String(lanOption)).innerHTML;
 
-                        let option2 = document.createElement("option");
-                        option2.innerText = innerText;
-                        option2.value = value;
-                        option2.id = id;
-                        selectInstructions.appendChild(option2);
-                    }
+                    strToStore += shortHand + ';' + name + ';' + inst;
+                    if (i != allStitchNames.length) strToStore += '|';
                 }
 
+                localStorage.setItem("stitchDefs", strToStore);
             } catch (error) {
                 console.log(error)
             }
             return;
         }
 
+        function loadStitchesToBoxes() {
+            let stitchDefs = localStorage.getItem("stitchDefs").split('|');
+
+            let selectBox = document.getElementById("choose-sel");
+            let selectInstructions = document.getElementById("sel-inst");
+            let defaultValue = document.createElement("option");
+            defaultValue.value = null;
+            defaultValue.innerHTML = "Select a stitch"
+            selectBox.appendChild(defaultValue);
+            selectInstructions.appendChild(defaultValue.cloneNode());
+
+            for (let i = 0; i < stitchDefs.length; i++) {
+                let currentStitch = stitchDefs[i];
+                currentStitch = currentStitch.split(';');
+                let opt = document.createElement("option");
+                opt.innerText = currentStitch[1];
+                opt.value = "opt_" + currentStitch[0];
+
+                selectBox.appendChild(opt);
+                selectInstructions.appendChild(opt.cloneNode());
+            }
+        }
+
         function addStitchToRow(stValue, numReps) {
             // I'm expecting stValue to be the id
-            let stShortHand = stValue.replace("st_n_", "");
+            //let stShortHand = stValue.replace("st_n_", "");
             let allStitches = localStorage.getItem("stitchDefs").split('|');
             let fullSt;
             for (let i = 0; i < allStitches.length && !fullSt; i++) {
                 fullSt = allStitches[i].split(';');
-                if (fullSt[1].replace("shortHand:", "") != stShortHand) fullSt = null;
+                if (fullSt[0] != stShortHand) fullSt = null;
             }
 
             let activeRow = document.getElementById(('row' + numRows).toString());
             let img = document.createElement("img");
-            img.src = "symbols/" + fullSt[1].replace("shortHand:", "") + ".jpg";
+            img.src = "symbols/" + fullSt[0] + ".jpg";
             img.style = "width: 50px; height: 50px; padding: 2px;"
             for (let i = 0; i < numReps; i++) {
                 document.getElementById(activeRow.id).appendChild(img.cloneNode())
@@ -280,23 +299,15 @@
 
         function showInstructions() {
             let selectedStitch = document.getElementById("sel-inst").value;
-            selectedStitch = selectedStitch.replace("st_n_", "");
             let splitDefinitions = localStorage.getItem("stitchDefs").split('|');
-            let splitStitch;
-
-            for (let i = 0; i < splitDefinitions.length && !splitStitch; i++) {
-                let currentSt = String(splitDefinitions[i]);
-                if (currentSt.includes(String("shortHand:" + selectedStitch))) {
-                    splitStitch = currentSt.split(';');
-                    let instructions = String(splitStitch[5]).replace("instructions:", "");
-                    instructions = instructions.replace('"', '');
+            for (let i = 0; i < splitDefinitions.length; i++) {
+                let currentSt = splitDefinitions[i].split(';');
+                if (selectedStitch == currentSt[0]) {
                     document.getElementById("divInst").innerHTML = instructions;
-
-                    document.getElementById("stitchesInRow").innerHTML = String(splitStitch[2]).replace("numStitches:", "");
-                    document.getElementById("incInRow").innerHTML = String(splitStitch[3]).replace("numIncreases:", "");
-                    document.getElementById("decsInRow").innerHTML = String(splitStitch[4]).replace("numDecreases:", "");
+                    return
                 }
             }
+
         }
 
         function getShortHand(str) {
@@ -313,13 +324,13 @@
         function openModal() {
             modal.style.display = "block";
 
-            let stitchList = [];
-            for (let i = 0; i < 5; i++) {
-                stitchList.push(stitchDefs[0])
-            }
-            for (let i = 0; i < 2; i++) {
-                stitchList.push(stitchDefs[3])
-            }
+            // let stitchList = [];
+            // for (let i = 0; i < 5; i++) {
+            //     stitchList.push(stitchDefs[0])
+            // }
+            // for (let i = 0; i < 2; i++) {
+            //     stitchList.push(stitchDefs[3])
+            // }
         }
 
 
