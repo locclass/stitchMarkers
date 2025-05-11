@@ -1,142 +1,175 @@
-let stitchCount = 0;
-let increaseCount = 0;
-let decreaseCount = 0;
-var pendingColumn = false;
-let numRows = 0;
-let stitchDefs = [];
+localStorage.setItem("numRows", 1);
+localStorage.setItem("stitchDefs", "");
 
-// Close the modal
-function closeModal() {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "none";
-}
+// html object definitions
+let modal;
+let btnCloseModal;
+let selectBox;
+let addStitchButton;
+let btnConfirmStitch;
+let btnAddRow;
+let btnConfirmInst;
+let selectInstructions;
 
-// Handle select changes
-function editSelects(event) {
-    // Placeholder for handling selection changes
-    console.log("Selected: " + event.target.value);
-}
+document.onload = addListeners();
 
-function finishRow() {
-    console.log("row finished");
-    var table = document.getElementById("patternTable");
-    table.appendChild(document.createElement("tr"));
-    document.getElementById("btnCompleteRow").remove();
-    stitchCount = 0;
-    increaseCount = 0;
-    decreaseCount = 0;
-    numRows++;
-}
+function addListeners() {
+    modal = document.getElementById("myModal");
+    btnCloseModal = document.getElementById("btnCloseModal");
+    selectBox = document.getElementById("choose-sel");
+    addStitchButton = document.getElementById('addStitchButton');
+    btnConfirmStitch = document.getElementById("btnConfirmStitch");
+    btnAddRow = document.getElementById("newRowButton");
+    btnConfirmInst = document.getElementById("btnConfirmInst");
+    selectInstructions = document.getElementById("sel-inst");
 
-// Add data to table and update counters
-function addData() {
-
-    var option = document.getElementById('choose-sel').value;
-    if (option == null || option == "null") { alert("Please choose a valid stitch."); return; }
-    if (pendingColumn) {
-        var table = document.getElementById("patternTable");
-        var rows = table.getElementsByTagName('tr');
-        var row = rows[rows.length - 1];
-        var repeat = document.getElementById("numReps").value;
-        stitchDefs = getAllStitches();
-
-        let selectedStitch;
-
-        let i = 0;
-        let found = false;
-        while (i < stitchDefs.length && !found) {
-            if (stitchDefs[i].shortHand.toString() == option.toString()) {
-                selectedStitch = stitchDefs[i];
-                found = true;
-            }
-            i++;
-        }
-
-
-        for (var j = 0; j < repeat; j++) {
-            increaseCount += selectedStitch.numInc;
-            decreaseCount += selectedStitch.numDec;
-            stitchCount += (1 + selectedStitch.numInc - selectedStitch.numDec);
-            var cell = row.insertCell(-1);
-            cell.className = "stitchCell";
-            cell.innerHTML = `<img src="./symbols/${selectedStitch.shortHand}.jpg" >`;
-        }
-
-        let infoId = "stitchInfoCell" + (numRows + 1).toString();
-        if (document.getElementById(infoId)) {
-            document.getElementById(infoId).remove();
-        }
-
-        var cell = row.insertCell(-1).innerHTML = `   <div id="${infoId}">    <p>Total sts: <span id="spanCantPuntos">${stitchCount}</span></p>
-        <p>Num. inc.: <span id="spanCantInc">${increaseCount}</span></p>
-        <p>Num. dec.: <span id="spanCantDec">${decreaseCount}</span></p></div> `;
-
-
-        // Reset pendingColumn to false after adding the column
-        pendingColumn = false;
-
-        if (document.getElementById("btnCompleteRow") == null) {
-            var completeButton = document.createElement("button");
-            completeButton.addEventListener("click", finishRow);
-            completeButton.innerHTML = "Row is complete";
-            completeButton.id = "btnCompleteRow";
-            document.getElementById("divButtonsGoHere").appendChild(completeButton);
-        }
-
-        document.getElementById('choose-sel').value = null;
-    }
-
-    closeModal(); // Close modal after adding data
-}
-
-function getAllStitches() {
-    if (stitchDefs.length == 0) {
-        createReadStream(path.join(__dirname, 'data', 'stitches.csv')) // Make sure to place the CSV file in the data folder
-            .pipe(csv()) // Parse CSV content
-            .on('data', (data) => stitchDefs.push(data))
-            .on('end', () => {
-                console.table(data);
-            });
-    }
-    return stitchDefs;
-}
-
-function loadStitches(stitches) {
-    var table = document.getElementById("patternTable");
-    table.appendChild(document.createElement("tr"));
-    // var stitches = getAllStitches();
-    var selectBox = document.getElementById("choose-sel");
-    if (stitches == undefined || stitches == null) return;
-    stitches.forEach(s => {
-        var opt = document.createElement('option');
-        opt.innerText = s.name;
-        opt.value = s.shortHand;
-        selectBox.appendChild(opt);
+    addStitchButton.addEventListener('click', openModal);
+    btnCloseModal.addEventListener('click', closeModal);
+    btnConfirmStitch.addEventListener('click', function () {
+        let numReps = document.getElementById("numReps").value
+        addStitchToRow(selectBox.value, parseInt(numReps));
+        document.getElementById("numReps").value = 1;
+        closeModal();
+        selectBox.value = "null";
     })
+    btnAddRow.addEventListener('click', function () {
+        let numRows = parseInt(localStorage.getItem("numRows"));
+        numRows++;
+        localStorage.setItem("numRows",numRows);
+
+        // create new row
+        let divRows = document.getElementById("divRows");
+        let newRow = document.createElement('div');
+        newRow.id = ('row' + numRows).toString();
+        newRow.className = 'row';
+        newRow.style = 'margin-top: 5px; margin-bottom: 5px; background-color: #fce6ef; height: 50px;';
+
+        divRows.appendChild(newRow);
+    })
+
+    loadStitchesFromFile('strings/defaultStrings.xliff');
+
+    btnConfirmInst.addEventListener('click', showInstructions);
 }
 
-// Open the modal
-function openModal() {
-    pendingColumn = true;
+// load stitches to select box
+async function loadStitchesFromFile(xliffPath) {
+    let lanOption;
+    if (xliffPath == "defaultStrings.xliff") {
+        lanOption = "source"
+    } else {
+        lanOption = "target"
+    }
 
-    const modal = document.getElementById("myModal");
+    try {
+        const response = await fetch(xliffPath, {
+            method: "GET",
+            mode: "cors",
+            headers: {
+                "Access-Control-Allow-Origin": "*"
+            }
+        });
+        const xmlString = await response.text();
+
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlString, 'application/xml');
+
+        let allStitchNames = xmlDoc.querySelectorAll("group[id='stitchNames'] > unit");
+        let allInstructions = xmlDoc.querySelectorAll("group[id='instructions'] > unit");
+
+        let strToStore = "";
+
+        for (let i = 0; i < allStitchNames.length; i++) {
+
+            let nameUnit = allStitchNames.item(i);
+            let instUnit = allInstructions.item(i);
+            let shortHand = String(nameUnit.id).replace("st_n_", "");
+            let name = nameUnit.querySelector(String(lanOption)).innerHTML;
+            let inst = instUnit.querySelector(String(lanOption)).innerHTML;
+            inst = inst.replace('\n', "");
+
+            strToStore += shortHand + ';' + name + ';' + inst;
+            if (i != allStitchNames.length - 1) strToStore += '|';
+        }
+
+        localStorage.setItem("stitchDefs", strToStore);
+        loadStitchesToBoxes();
+    } catch (error) {
+        console.log(error)
+    }
+    return;
+}
+
+function loadStitchesToBoxes() {
+    let stitchDefs = localStorage.getItem("stitchDefs").split('|');
+
+    let selectBox = document.getElementById("choose-sel");
+    let selectInstructions = document.getElementById("sel-inst");
+    let defaultValue = document.createElement("option");
+    defaultValue.value = null;
+    defaultValue.innerHTML = "Select a stitch"
+    selectBox.appendChild(defaultValue);
+    selectInstructions.appendChild(defaultValue);
+
+    for (let i = 0; i < stitchDefs.length; i++) {
+        let currentStitch = stitchDefs[i];
+        currentStitch = currentStitch.split(';');
+        let opt = document.createElement("option");
+        opt.text = currentStitch[1];
+        opt.value = "opt_" + currentStitch[0];
+
+        selectBox.appendChild(opt);
+        let opt2 = document.createElement("option");
+        opt2.text = currentStitch[1];
+        opt2.value = "opt_" + currentStitch[0];
+        selectInstructions.appendChild(opt2);
+    }
+}
+
+function addStitchToRow(stValue, numReps) {
+    // I'm expecting stValue to be the id
+    let stShortHand = stValue.replace("opt_", "");
+    let allStitches = localStorage.getItem("stitchDefs").split('|');
+    let fullSt;
+    for (let i = 0; i < allStitches.length && !fullSt; i++) {
+        fullSt = allStitches[i].split(';');
+        if (fullSt[0] != stShortHand) fullSt = null;
+    }
+
+    let activeRow = document.getElementById(('row' + localStorage.getItem("numRows")).toString());
+    let img = document.createElement("img");
+    img.src = "symbols/" + fullSt[0] + ".jpg";
+    img.style = "width: 50px; height: 50px; padding: 2px;"
+    for (let i = 0; i < numReps; i++) {
+        document.getElementById(activeRow.id).appendChild(img.cloneNode())
+    }
+}
+
+function showInstructions() {
+    let selectedStitch = document.getElementById("sel-inst").value;
+    let splitDefinitions = localStorage.getItem("stitchDefs").split('|');
+    for (let i = 0; i < splitDefinitions.length; i++) {
+        let currentSt = splitDefinitions[i].split(';');
+        if (selectedStitch.replace("opt_", "") == currentSt[0]) {
+            document.getElementById("divInst").innerHTML = currentSt[2];
+            return
+        }
+    }
+
+}
+
+function getShortHand(str) {
+    let aux = str.split("symbols/");
+    str = str.replace("symbols/", "");
+    str = str.replace(".jpg", "");
+    return str;
+}
+
+function closeModal() {
+    if (modal.style.display != 'none') modal.style.display = 'none';
+}
+
+function openModal() {
     modal.style.display = "block";
 }
 
-
-document.getElementById('addStitchButton').addEventListener('click', openModal);
-document.getElementById("spanCloseModal").addEventListener("click", closeModal);
-
-
-//document.onload = loadStitches(getAllStitches());
-
-// Event listener to close the modal when clicked outside
-window.onclick = function (event) {
-    const modal = document.getElementById("myModal");
-    const closeModalBtn = document.getElementById("spanCloseModal");
-    if (event.target === modal || event.target === closeModalBtn) {
-        modal.style.display = "none";
-    }
-};
-
-module.exports = {loadStitches}
