@@ -180,9 +180,10 @@ function showRowExplanation() {
                 rowStitches.push(currentSt[1]);
                 rowStitchesReps.push(1);
             } else {
-                if (rowStitches[i - 1] == currentSt[1]) {
+                if (rowStitches[rowStitches.length - 1] == currentSt[1]) {
                     let numRepetitions = parseInt(rowStitchesReps[rowStitchesReps.length - 1]);
                     rowStitchesReps[rowStitchesReps.length - 1] = numRepetitions + 1;
+                    console.log(rowStitchesReps);
                 } else {
                     rowStitches.push(currentSt[1]);
                     rowStitchesReps.push(1);
@@ -191,10 +192,11 @@ function showRowExplanation() {
         }
 
         let paragraph = document.getElementById("divRowInst");
+        paragraph.innerHTML = "";
         for (let j = 0; j < rowStitchesReps.length; j++) {
             let st = findStitch(rowStitches[j].replace(".jpg", ""));
-            console.log(st)
-            paragraph.insertAdjacentText("beforeend", `\n` + "Work " + (st[1]).toLowerCase() + "stitch");
+            //console.log(st)
+            paragraph.insertAdjacentText("beforeend", `\n` + "Work " + (st[1]).toLowerCase() + " stitch");
             if (rowStitchesReps[j] != 1) {
                 paragraph.insertAdjacentText("beforeend", " " + rowStitchesReps[j] + " times.");
             } else {
