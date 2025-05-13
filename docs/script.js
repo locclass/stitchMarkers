@@ -170,8 +170,8 @@ function showRowExplanation() {
     } else {
         let selectedRow = allRows[rowNumber - 1];
         let rowStitchesImg = selectedRow.getElementsByTagName('img');
-        let rowStitches;
-        let rowStitchesReps;
+        let rowStitches = [];
+        let rowStitchesReps = [];
         //console.log(rowStitches);
         for (let i = 0; i < rowStitchesImg.length; i++) {
             let currentSt = String(rowStitchesImg[i].src).substring(String(rowStitchesImg[i].src).indexOf("/symbols/") + 1);
