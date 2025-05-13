@@ -10,6 +10,7 @@ let btnConfirmStitch;
 let btnAddRow;
 let btnConfirmInst;
 let selectInstructions;
+let btnConfirmRowInst;
 
 document.onload = addListeners();
 
