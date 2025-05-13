@@ -174,7 +174,7 @@ function showRowExplanation() {
         let rowStitchesReps = [];
         //console.log(rowStitches);
         for (let i = 0; i < rowStitchesImg.length; i++) {
-            let currentSt = String(rowStitchesImg[i].src).substring(String(rowStitchesImg[i].src).indexOf("/symbols/") + 1);
+            let currentSt = String(rowStitchesImg[i].src).substring(String(rowStitchesImg[i].src).split("/symbols/")[1]);
             if (i == 0) {
                 rowStitches.push(currentSt);
                 rowStitchesReps.push(1);
