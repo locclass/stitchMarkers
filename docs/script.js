@@ -162,7 +162,8 @@ function showInstructions() {
 }
 
 function showRowExplanation(rowNumber) {
-    let allRows = document.getElementById('divRows').getElementsByTagName('div');
+    let allRows = document.getElementById('divRows');
+    allRows = allRows.getElementsByTagName('div');
     if (allRows.length < rowNumber) { 
         alert('Please choose a number lower or equal to ' + allRows.length); 
     } else {
