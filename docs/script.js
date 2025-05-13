@@ -172,7 +172,6 @@ function showRowExplanation() {
         let rowStitchesImg = selectedRow.getElementsByTagName('img');
         let rowStitches = [];
         let rowStitchesReps = [];
-        //console.log(rowStitches);
         for (let i = 0; i < rowStitchesImg.length; i++) {
             let currentSt = String(rowStitchesImg[i].src);
             currentSt = currentSt.split('symbols/');
@@ -183,7 +182,7 @@ function showRowExplanation() {
                 if (rowStitches[rowStitches.length - 1] == currentSt[1]) {
                     let numRepetitions = parseInt(rowStitchesReps[rowStitchesReps.length - 1]);
                     rowStitchesReps[rowStitchesReps.length - 1] = numRepetitions + 1;
-                    console.log(rowStitchesReps);
+                    
                 } else {
                     rowStitches.push(currentSt[1]);
                     rowStitchesReps.push(1);
@@ -195,8 +194,7 @@ function showRowExplanation() {
         paragraph.innerHTML = "";
         for (let j = 0; j < rowStitchesReps.length; j++) {
             let st = findStitch(rowStitches[j].replace(".jpg", ""));
-            //console.log(st)
-            paragraph.insertAdjacentText("beforeend", `\n` + "Work " + (st[1]).toLowerCase() + " stitch");
+            paragraph.insertAdjacentText("beforeend", `\n` + "Work \"" + (st[1]).toLowerCase() + "\" stitch");
             if (rowStitchesReps[j] != 1) {
                 paragraph.insertAdjacentText("beforeend", " " + rowStitchesReps[j] + " times.");
             } else {
@@ -218,10 +216,8 @@ function getShortHand(str) {
 function findStitch(shortHand) {
     let allSts = localStorage.getItem("stitchDefs");
     allSts = allSts.split('|');
-    console.log(shortHand)
     for (let i = 0; i < allSts.length; i++) {
         let st = allSts[i].split(";");
-        console.log(st);
         if (st[0] == shortHand) {
             return st;
         }
