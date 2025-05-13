@@ -165,22 +165,62 @@ function showRowExplanation() {
     let rowNumber = document.getElementById('numRow').value;
     let allRows = document.getElementById('divRows');
     allRows = allRows.getElementsByTagName('div');
-    if (allRows.length < rowNumber) { 
-        alert('Please choose a number lower or equal to ' + allRows.length); 
+    if (allRows.length < rowNumber) {
+        alert('Please choose a number lower or equal to ' + allRows.length);
     } else {
         let selectedRow = allRows[rowNumber - 1];
-        let rowStitches = selectedRow.getElementsByTagName('img');
-        console.log(rowStitches);
+        let rowStitchesImg = selectedRow.getElementsByTagName('img');
+        let rowStitches;
+        let rowStitchesReps;
+        //console.log(rowStitches);
+        for (let i = 0; i < rowStitchesImg.length; i++) {
+            let currentSt = String(rowStitchesImg[i].src).substring(String(rowStitchesImg[i].src).indexOf("/symbols/") + 1);
+            if (i == 0) {
+                rowStitches.push(currentSt);
+                rowStitchesReps.push(1);
+            } else {
+                if (rowStitches[i - 1] == currentSt) {
+                    let numRepetitions = parseInt(rowStitchesReps[rowStitchesReps.length - 1]);
+                    rowStitchesReps[rowStitchesReps.length - 1] = numRepetitions + 1;
+                } else {
+                    rowStitches.push(currentSt);
+                    rowStitchesReps.push(1);
+                }
+            }
+        }
+
+        let paragraph = document.getElementById("divRowInst");
+        for (let j = 0; j < rowStitchesReps.length; j++) {
+            let st = findStitch(rowStitches[j].replace(".jpg", ""));
+            paragraph.insertAdjacentText("beforeend", `\n` + "Work " + st[1].toLowerCase() + "stitch");
+            if (rowStitchesReps[j] != 1) {
+                paragraph.insertAdjacentText("beforeend", " " + rowStitchesReps[j] + " times.");
+            } else {
+                paragraph.insertAdjacentText("beforeend", ".");
+            }
+        }
     }
 
 
 }
 
 function getShortHand(str) {
-    let aux = str.split("symbols/");
+    //let aux = str.split("symbols/");
     str = str.replace("symbols/", "");
     str = str.replace(".jpg", "");
     return str;
+}
+
+function findStitch(shortHand) {
+    let allSts = localStorage.getItem("stitchDefs");
+    allSts = allSts.split('|');
+
+    for (let i = 0; i < allSts.length; i++) {
+        let st = allSts[i].split(";");
+        if (st[0] == shortHand) {
+            return st;
+        }
+    }
 }
 
 function closeModal() {
