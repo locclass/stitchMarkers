@@ -2,25 +2,24 @@ name;shortHand;numStitches;numInc;numDec;instructions
 Knit;k;1;0;0;Knit one
 Purl;p;1;0;0;Purl one
 Yarn over;yo;1;1;0;Pass yarn over the right needle.
-Knit two together;k2tog;1;0;1;With yarn at back, enter your right needle into the first two stitches in your left needle, from left to right, and knit both at the same time.
-Purl two together;p2tog;1;0;1;With yarn at front, enter your right needle into the first two stitches in your left needle, from right to left, and purl both at the same time.
-Slip slip knit;ssk;1;0;1;Slip the first stich onto the right needle. Knit the second stitch, then pass the first stich over the generated loop.
-Rib;rib;2;0;0;K1, P1
 Cast on;co;1;1;0;Make a slip knot. Slide slip knot onto needle. Pull yarn to tighten knot. Wrap the working yarn around your thumb so you have a loop around your thumb. Bring the needle under and up through the loop around your thumb. Remove your thumb from the loop and pull the yarn.
 Bind off;bo;1;0;1;Insert the tip of the left needle into the front of the right-hand st on the right needle. Lift up and over the left-hand st. Allow st on the left needle to drop off the needle, leaving just one stitch on the right needle.
-Make one stitch;m1;1;1;0;Pull up a loop from knitted fabric. K1.
-Drop one stitch;d1;1;0;1;Take st off needle and unravel until beginning of project.
+Knit two together;k2tog;1;0;1;With yarn at back, enter your right needle into the first two stitches in your left needle, from left to right, and knit both at the same time.
+Purl two together;p2tog;1;0;1;With yarn at front, enter your right needle into the first two stitches in your left needle, from right to left, and purl both at the same time.
+Slip slip knit;ssk;2;0;1;Slip first and second sts onto the right needle. Pass to left needle. K1. Pass slipped st over last st.
+Slip slip purl;ssp;2;0;1;Slip first and second sts onto the right needle. Pass to left needle. P1. Pass slipped st over last st.
+Knit through back loop;ktbl;1;0;0;Insert right needle from right to left in back of st. YO clockwise and pull through.
+Purl through back loop;ktbl;1;0;0;Wyif,insert right needle from left to right in back of st. YO counter-clockwise and pull through.
+Make one;M1;1;1;0;From the front, pick up strand between two sts and lift to left needle. Insert right needle tfl. Yarn is in front of work. YO and pull through.
+Make one purlwise;M1P;1;1;0;From the front, pick up strand between two sts and lift to left needle. Insert right needle tbl. Yarn is in front of work. YO and pull through.
 Make bobble;MB;1;0;0;Knit into desired st without dropping the loop off the left needle. Knit same st through back loop, then through front loop.
-Cross 3 stitches backwards;C3B;3;0;0;Slip next 2 sts onto cable needle and leave at back of work, K1, then K2 from cable needle.
-Cross 3 stitches forward;C3F;3;0;0;Slip next st onto cable needle and leave at front of work, K2, then K1 from cable needle.
-Cross 4 stitches left;Cr4L;4;0;0;Slip next 2 sts onto cable needle and leave at front of work, P2, then K2 from cable needle.
-Cross 4 stitches right;Cr4R;4;0;0;Slip next 2 sts onto cable needle and leave at back of work, K2, then P2 from cable needle.
-Decrease 4;dec4;4;0;4;Slip next 3 sts with yarn at back (WS) of work, *lift second st on right needle over first (centre) st and off right needle, slip centre st back onto left needle, lift second st on left needle over centre st*, slip centre st back onto right needle, rep from * to * once more (4 sts decreased), K centre st.
-Twist two stitches left;Tw2L;2;0;0;K into back of second st on left needle then K tog through back loop first and second sts and slip both sts off left needle at same time.
-Twist two stitches right;Tw2R;2;0;0;K2tog leaving sts on left needle, K first st again and slip both sts off left needle at same time.
+Nupp;nupp;1;0;0;Loosely *K1, without slipping the stitch off the needle YO*. Repeat from * to * 2 more times. K1. Insert left needle through all 7 sts. YO and pull through.
 Knit stitch in row below;k-b;1;0;0;Insert needle into loop below the first stitch on left needle. Wrap yarn around needle counter-clockwise. Pull yarn through towards the front. Drop stitch off left needle.
 Purl stitch in row below;p-b;1;0;0;Bring yarn to front and enter loop below next purl stitch from behind. Wrap yarn around needle counter-clockwise. Pull yarn through. Drop resulting stitch off left needle.
 Knit front and back;kfb;1;1;0;K1 without slipping to right needle. Insert needle into back loop of same st from right to left. YO, pull yarn through and drop st.
-Slip, knit, lift;skl;1;1;0;Slip 1 knitwise. Slip same st onto left needle purlwise. K1. Lift right leg of st one row below and pass to left needle. K1 tbl.
-Knit left loop;kll;1;1;0;Insert left needle from the back into st two rows below. Pick up left leg of st and pass to left needle. K tbl.
-Make one purl left;M1PL;1;1;0;From the front, pick up strand between two sts and lift to left needle. Insert right needle tbl. Yarn is in front of work. YO and pull through.
+Knit, yarn over, knit;kyok;1;1;0;K1 without dropping st from left needle. YO. K1 into same st.
+Purl, yarn over, purl;pyop;1;1;0;P1 without dropping st from left needle. YO. P1 into same st.
+Slip, slip, knit, pass;s2kp;3;0;2;Slip 2 sts tog. K1. Pass slipped sts over.
+Slip, slip, slip, knit;sssk;3;0;2;Slip 3 sts knitwise. Pass to left needle and K3tog.
+Twisted slip, slip, knit;tw-ssk;2;0;1;Slip 1 purlwise. Slip 1 knitwise. Pass 2 slipped sts to left needle and K2tog tbl.
+Twisted knit two together;tw-k2tog;2;0;1;Slip 1 purlwise tfl and 1 purlwise tbl. Pass 2 slipped sts to left needle and K2tog.
