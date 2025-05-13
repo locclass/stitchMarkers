@@ -215,7 +215,7 @@ function getShortHand(str) {
 function findStitch(shortHand) {
     let allSts = localStorage.getItem("stitchDefs");
     allSts = allSts.split('|');
-
+    console.log(shortHand)
     for (let i = 0; i < allSts.length; i++) {
         let st = allSts[i].split(";");
         console.log(st);
