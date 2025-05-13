@@ -53,7 +53,7 @@ function addListeners() {
 
     btnConfirmInst.addEventListener('click', showInstructions);
 
-    btnConfirmRowInst.addEventListener('click', showRowExplanation(document.getElementById('numRow').value))
+    btnConfirmRowInst.addEventListener('click', showRowExplanation)
 }
 
 // load stitches to select box
@@ -161,7 +161,8 @@ function showInstructions() {
     }
 }
 
-function showRowExplanation(rowNumber) {
+function showRowExplanation() {
+    let rowNumber = document.getElementById('numRow').value;
     let allRows = document.getElementById('divRows');
     allRows = allRows.getElementsByTagName('div');
     if (allRows.length < rowNumber) { 
