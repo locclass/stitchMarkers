@@ -218,6 +218,7 @@ function findStitch(shortHand) {
 
     for (let i = 0; i < allSts.length; i++) {
         let st = allSts[i].split(";");
+        console.log(st);
         if (st[0] == shortHand) {
             return st;
         }
