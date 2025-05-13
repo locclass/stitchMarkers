@@ -33,13 +33,13 @@
     <div class="container" id="mainContainer" style="overflow-y: scroll;">
         <nav class="navbar">
             <div class="container-fluid row">
-                <div style="width: max-content;">
+                <div style="width: 75%; text-align: center;">
                     <h2 id="title" style="text-align: center;">Stitch Markers</h1>
                         <h4 id="slogan" style="text-align: center;">Knitting made easy</h4>
                 </div>
                 <div class="dropdown">
-                    <select id="selTranslations" onchange="location=`https://locclass.github.io/testStitchMarkers/studentTranslations/` + this.value">
-                        <option value="#"><a class="dropdown-item" href="#">Translations</a></option>
+                    <select id="selTranslations" class="form-select" onchange="location=`https://locclass.github.io/testStitchMarkers/studentTranslations/` + this.value">
+                        <option value="#">Translations</option>
                         <option value="camila/index.html">Camila</option>
                         <option value="evangelina/index.html">Evangelina</option>
                         <option value="guidai/index.html">Guidaí</option>
@@ -69,7 +69,7 @@
             style="margin-top: 20px; margin-bottom: 20px; padding-top:20px; border-top: 2px dashed #bf9fac;">
             <p>
                 <span>See instructions for stitch </span>
-                <select id="sel-inst">
+                <select id="sel-inst" class="form-select">
                 </select>
                 <button id="btnConfirmInst">Confirm</button>
             </p>
@@ -81,7 +81,7 @@
             style="margin-top: 20px; margin-bottom: 20px; padding-top:20px; border-top: 2px dashed #bf9fac;">
             <p>
                 <span>See description for row </span>
-                <input type="number" id="numRow" min="1">
+                <input type="number" id="numRow" min="1" width="50px">
                 <button id="btnConfirmRowDesc">Confirm</button>
             </p>
             <div id="divRowInst"></div>
@@ -93,7 +93,7 @@
                 <button class="close" id="btnCloseModal">Χ</button>
 
                 <div class="center">Select a stitch</div>
-                <select id="choose-sel">
+                <select id="choose-sel" class="form-select">
 
                 </select>
 
