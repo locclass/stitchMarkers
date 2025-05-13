@@ -174,16 +174,17 @@ function showRowExplanation() {
         let rowStitchesReps = [];
         //console.log(rowStitches);
         for (let i = 0; i < rowStitchesImg.length; i++) {
-            let currentSt = String(rowStitchesImg[i].src).substring(String(rowStitchesImg[i].src).split("/symbols/")[1]);
+            let currentSt = String(rowStitchesImg[i].src);
+            currentSt = currentSt.split('symbols/');
             if (i == 0) {
-                rowStitches.push(currentSt);
+                rowStitches.push(currentSt[1]);
                 rowStitchesReps.push(1);
             } else {
-                if (rowStitches[i - 1] == currentSt) {
+                if (rowStitches[i - 1] == currentSt[1]) {
                     let numRepetitions = parseInt(rowStitchesReps[rowStitchesReps.length - 1]);
                     rowStitchesReps[rowStitchesReps.length - 1] = numRepetitions + 1;
                 } else {
-                    rowStitches.push(currentSt);
+                    rowStitches.push(currentSt[1]);
                     rowStitchesReps.push(1);
                 }
             }
