@@ -22,6 +22,7 @@ function addListeners() {
     btnAddRow = document.getElementById("newRowButton");
     btnConfirmInst = document.getElementById("btnConfirmInst");
     selectInstructions = document.getElementById("sel-inst");
+    btnConfirmRowInst = document.getElementById("btnConfirmRowDesc");
 
     addStitchButton.addEventListener('click', openModal);
     btnCloseModal.addEventListener('click', closeModal);
@@ -35,7 +36,7 @@ function addListeners() {
     btnAddRow.addEventListener('click', function () {
         let numRows = parseInt(localStorage.getItem("numRows"));
         numRows++;
-        localStorage.setItem("numRows",numRows);
+        localStorage.setItem("numRows", numRows);
 
         // create new row
         let divRows = document.getElementById("divRows");
@@ -50,6 +51,8 @@ function addListeners() {
     loadStitchesFromFile('defaultStrings.xliff');
 
     btnConfirmInst.addEventListener('click', showInstructions);
+
+    btnConfirmRowInst.addEventListener('click', showRowExplanation(document.getElementById('numRow').value))
 }
 
 // load stitches to select box
@@ -155,6 +158,18 @@ function showInstructions() {
             return
         }
     }
+}
+
+function showRowExplanation(rowNumber) {
+    let allRows = document.getElementById('divRows').getElementsByTagName('div');
+    if (allRows.length < rowNumber) { 
+        alert('Please choose a number lower or equal to ' + allRows.length); 
+    } else {
+        let selectedRow = allRows[rowNumber - 1];
+        let rowStitches = selectedRow.getElementsByTagName('img');
+        console.log(rowStitches);
+    }
+
 
 }
 
