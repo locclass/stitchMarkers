@@ -49,7 +49,7 @@ function addListeners() {
         divRows.appendChild(newRow);
     })
 
-    loadStitchesFromFile('strings.xliff');
+    loadStitchesFromFile('defaultStrings.xliff');
 
     btnConfirmInst.addEventListener('click', showInstructions);
 
@@ -142,7 +142,7 @@ function addStitchToRow(stValue, numReps) {
 
     let activeRow = document.getElementById(('row' + localStorage.getItem("numRows")).toString());
     let img = document.createElement("img");
-    img.src = "../../symbols/" + fullSt[0] + ".jpg";
+    img.src = "symbols/" + fullSt[0] + ".jpg";
     img.style = "width: 50px; height: 50px; padding: 2px;"
     for (let i = 0; i < numReps; i++) {
         document.getElementById(activeRow.id).appendChild(img.cloneNode())
