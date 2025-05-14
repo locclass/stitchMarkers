@@ -103,5 +103,5 @@ select {
 #numRow {
     width: 50px;
     border-radius: 5px;
-    border-color: #bf9fac;
+    border: 1px solid #bf9fac;
 }
