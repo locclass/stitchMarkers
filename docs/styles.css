@@ -99,3 +99,9 @@ select {
     border-color: #bf9fac;
     padding: 3px;
 }
+
+#numRow {
+    width: 50px;
+    border-radius: 5px;
+    border-color: #bf9fac;
+}

@@ -1,280 +1,251 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.1" version="2.1">
     <file original="global" datatype="HTML" source-language="en-GB">
         <body>
-            <group id="stitchNames">
-                <unit id="st_n_k">
+<group id="stitchNames">
+<unit id="st_n_k">
                     <segment>
                         <source>Knit</source>
                     </segment>
-                </unit>
-                <unit id="st_n_p">
+                </unit> 
+<unit id="st_n_p">
                     <segment>
                         <source>Purl</source>
                     </segment>
-                </unit>
-                <unit id="st_n_yo">
+                </unit> 
+<unit id="st_n_yo">
                     <segment>
                         <source>Yarn over</source>
                     </segment>
-                </unit>
-                <unit id="st_n_co">
+                </unit> 
+<unit id="st_n_co">
                     <segment>
                         <source>Cast on</source>
                     </segment>
-                </unit>
-                <unit id="st_n_bo">
+                </unit> 
+<unit id="st_n_bo">
                     <segment>
                         <source>Bind off</source>
                     </segment>
-                </unit>
-                <unit id="st_n_k2tog">
+                </unit> 
+<unit id="st_n_k2tog">
                     <segment>
                         <source>Knit two together</source>
                     </segment>
-                </unit>
-                <unit id="st_n_p2tog">
+                </unit> 
+<unit id="st_n_p2tog">
                     <segment>
                         <source>Purl two together</source>
                     </segment>
-                </unit>
-                <unit id="st_n_ssk">
+                </unit> 
+<unit id="st_n_ssk">
                     <segment>
                         <source>Slip slip knit</source>
                     </segment>
-                </unit>
-                <unit id="st_n_ssp">
+                </unit> 
+<unit id="st_n_ssp">
                     <segment>
                         <source>Slip slip purl</source>
                     </segment>
-                </unit>
-                <unit id="st_n_ktbl">
+                </unit> 
+<unit id="st_n_ktbl">
                     <segment>
                         <source>Knit through back loop</source>
                     </segment>
-                </unit>
-                <unit id="st_n_ktbl">
+                </unit> 
+<unit id="st_n_ptbl">
                     <segment>
                         <source>Purl through back loop</source>
                     </segment>
-                </unit>
-                <unit id="st_n_M1">
+                </unit> 
+<unit id="st_n_M1">
                     <segment>
                         <source>Make one</source>
                     </segment>
-                </unit>
-                <unit id="st_n_M1P">
+                </unit> 
+<unit id="st_n_M1P">
                     <segment>
                         <source>Make one purlwise</source>
                     </segment>
-                </unit>
-                <unit id="st_n_MB">
+                </unit> 
+<unit id="st_n_MB">
                     <segment>
                         <source>Make bobble</source>
                     </segment>
-                </unit>
-                <unit id="st_n_nupp">
+                </unit> 
+<unit id="st_n_nupp">
                     <segment>
                         <source>Nupp</source>
                     </segment>
-                </unit>
-                <unit id="st_n_k-b">
+                </unit> 
+<unit id="st_n_k-b">
                     <segment>
                         <source>Knit stitch in row below</source>
                     </segment>
-                </unit>
-                <unit id="st_n_p-b">
+                </unit> 
+<unit id="st_n_p-b">
                     <segment>
                         <source>Purl stitch in row below</source>
                     </segment>
-                </unit>
-                <unit id="st_n_kfb">
+                </unit> 
+<unit id="st_n_kfb">
                     <segment>
                         <source>Knit front and back</source>
                     </segment>
-                </unit>
-                <unit id="st_n_kyok">
+                </unit> 
+<unit id="st_n_kyok">
                     <segment>
                         <source>Knit, yarn over, knit</source>
                     </segment>
-                </unit>
-                <unit id="st_n_pyop">
+                </unit> 
+<unit id="st_n_pyop">
                     <segment>
                         <source>Purl, yarn over, purl</source>
                     </segment>
-                </unit>
-                <unit id="st_n_s2kp">
+                </unit> 
+<unit id="st_n_s2kp">
                     <segment>
                         <source>Slip, slip, knit, pass</source>
                     </segment>
-                </unit>
-                <unit id="st_n_sssk">
+                </unit> 
+<unit id="st_n_sssk">
                     <segment>
                         <source>Slip, slip, slip, knit</source>
                     </segment>
-                </unit>
-                <unit id="st_n_tw-ssk">
+                </unit> 
+<unit id="st_n_tw-ssk">
                     <segment>
                         <source>Twisted slip, slip, knit</source>
                     </segment>
-                </unit>
-                <unit id="st_n_tw-k2tog">
+                </unit> 
+<unit id="st_n_tw-k2tog">
                     <segment>
                         <source>Twisted knit two together</source>
                     </segment>
-                </unit>
+                </unit> 
 
-            </group>
-            <group id="instructions">
-                <unit id="st_ins_k">
+</group><group id="instructions">
+<unit id="st_ins_k">
                     <segment>
                         <source>Knit one</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_p">
+                </unit> 
+<unit id="st_ins_p">
                     <segment>
                         <source>Purl one</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_yo">
+                </unit> 
+<unit id="st_ins_yo">
                     <segment>
                         <source>Pass yarn over the right needle.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_co">
+                </unit> 
+<unit id="st_ins_co">
                     <segment>
-                        <source>Make a slip knot. Slide slip knot onto needle. Pull yarn to tighten
-                            knot. Wrap the working yarn around your thumb so you have a loop around
-                            your thumb. Bring the needle under and up through the loop around your
-                            thumb. Remove your thumb from the loop and pull the yarn.</source>
+                        <source>Make a slip knot. Slide slip knot onto needle. Pull yarn to tighten knot. Wrap the working yarn around your thumb so you have a loop around your thumb. Bring the needle under and up through the loop around your thumb. Remove your thumb from the loop and pull the yarn.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_bo">
+                </unit> 
+<unit id="st_ins_bo">
                     <segment>
-                        <source>Insert the tip of the left needle into the front of the right-hand
-                            st on the right needle. Lift up and over the left-hand st. Allow st on
-                            the left needle to drop off the needle, leaving just one stitch on the
-                            right needle.</source>
+                        <source>Insert the tip of the left needle into the front of the right-hand st on the right needle. Lift up and over the left-hand st. Allow st on the left needle to drop off the needle, leaving just one stitch on the right needle.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_k2tog">
+                </unit> 
+<unit id="st_ins_k2tog">
                     <segment>
-                        <source>With yarn at back, enter your right needle into the first two
-                            stitches in your left needle, from left to right, and knit both at the
-                            same time.</source>
+                        <source>With yarn at back, enter your right needle into the first two stitches in your left needle, from left to right, and knit both at the same time.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_p2tog">
+                </unit> 
+<unit id="st_ins_p2tog">
                     <segment>
-                        <source>With yarn at front, enter your right needle into the first two
-                            stitches in your left needle, from right to left, and purl both at the
-                            same time.</source>
+                        <source>With yarn at front, enter your right needle into the first two stitches in your left needle, from right to left, and purl both at the same time.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_ssk">
+                </unit> 
+<unit id="st_ins_ssk">
                     <segment>
-                        <source>Slip first and second sts onto the right needle. Pass to left
-                            needle. K1. Pass slipped st over last st.</source>
+                        <source>Slip first and second sts onto the right needle. Pass to left needle. K1. Pass slipped st over last st.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_ssp">
+                </unit> 
+<unit id="st_ins_ssp">
                     <segment>
-                        <source>Slip first and second sts onto the right needle. Pass to left
-                            needle. P1. Pass slipped st over last st.</source>
+                        <source>Slip first and second sts onto the right needle. Pass to left needle. P1. Pass slipped st over last st.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_ktbl">
+                </unit> 
+<unit id="st_ins_ktbl">
                     <segment>
-                        <source>Insert right needle from right to left in back of st. YO clockwise
-                            and pull through.</source>
+                        <source>Insert right needle from right to left in back of st. YO clockwise and pull through.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_ktbl">
+                </unit> 
+<unit id="st_ins_ptbl">
                     <segment>
-                        <source>Wyif,insert right needle from left to right in back of st. YO
-                            counter-clockwise and pull through.</source>
+                        <source>Wyif,insert right needle from left to right in back of st. YO counter-clockwise and pull through.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_M1">
+                </unit> 
+<unit id="st_ins_M1">
                     <segment>
-                        <source>From the front, pick up strand between two sts and lift to left
-                            needle. Insert right needle tfl. Yarn is in front of work. YO and pull
-                            through.</source>
+                        <source>From the front, pick up strand between two sts and lift to left needle. Insert right needle tfl. Yarn is in front of work. YO and pull through.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_M1P">
+                </unit> 
+<unit id="st_ins_M1P">
                     <segment>
-                        <source>From the front, pick up strand between two sts and lift to left
-                            needle. Insert right needle tbl. Yarn is in front of work. YO and pull
-                            through.</source>
+                        <source>From the front, pick up strand between two sts and lift to left needle. Insert right needle tbl. Yarn is in front of work. YO and pull through.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_MB">
+                </unit> 
+<unit id="st_ins_MB">
                     <segment>
-                        <source>Knit into desired st without dropping the loop off the left needle.
-                            Knit same st through back loop, then through front loop.</source>
+                        <source>Knit into desired st without dropping the loop off the left needle. Knit same st through back loop, then through front loop.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_nupp">
+                </unit> 
+<unit id="st_ins_nupp">
                     <segment>
-                        <source>Loosely *K1, without slipping the stitch off the needle YO*. Repeat
-                            from * to * 2 more times. K1. Insert left needle through all 7 sts. YO
-                            and pull through.</source>
+                        <source>Loosely *K1, without slipping the stitch off the needle YO*. Repeat from * to * 2 more times. K1. Insert left needle through all 7 sts. YO and pull through.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_k-b">
+                </unit> 
+<unit id="st_ins_k-b">
                     <segment>
-                        <source>Insert needle into loop below the first stitch on left needle. Wrap
-                            yarn around needle counter-clockwise. Pull yarn through towards the
-                            front. Drop stitch off left needle.</source>
+                        <source>Insert needle into loop below the first stitch on left needle. Wrap yarn around needle counter-clockwise. Pull yarn through towards the front. Drop stitch off left needle.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_p-b">
+                </unit> 
+<unit id="st_ins_p-b">
                     <segment>
-                        <source>Bring yarn to front and enter loop below next purl stitch from
-                            behind. Wrap yarn around needle counter-clockwise. Pull yarn through.
-                            Drop resulting stitch off left needle.</source>
+                        <source>Bring yarn to front and enter loop below next purl stitch from behind. Wrap yarn around needle counter-clockwise. Pull yarn through. Drop resulting stitch off left needle.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_kfb">
+                </unit> 
+<unit id="st_ins_kfb">
                     <segment>
-                        <source>K1 without slipping to right needle. Insert needle into back loop of
-                            same st from right to left. YO, pull yarn through and drop st.</source>
+                        <source>K1 without slipping to right needle. Insert needle into back loop of same st from right to left. YO, pull yarn through and drop st.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_kyok">
+                </unit> 
+<unit id="st_ins_kyok">
                     <segment>
                         <source>K1 without dropping st from left needle. YO. K1 into same st.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_pyop">
+                </unit> 
+<unit id="st_ins_pyop">
                     <segment>
                         <source>P1 without dropping st from left needle. YO. P1 into same st.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_s2kp">
+                </unit> 
+<unit id="st_ins_s2kp">
                     <segment>
                         <source>Slip 2 sts tog. K1. Pass slipped sts over.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_sssk">
+                </unit> 
+<unit id="st_ins_sssk">
                     <segment>
                         <source>Slip 3 sts knitwise. Pass to left needle and K3tog.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_tw-ssk">
+                </unit> 
+<unit id="st_ins_tw-ssk">
                     <segment>
-                        <source>Slip 1 purlwise. Slip 1 knitwise. Pass 2 slipped sts to left needle
-                            and K2tog tbl.</source>
+                        <source>Slip 1 purlwise. Slip 1 knitwise. Pass 2 slipped sts to left needle and K2tog tbl.</source>
                     </segment>
-                </unit>
-                <unit id="st_ins_tw-k2tog">
+                </unit> 
+<unit id="st_ins_tw-k2tog">
                     <segment>
-                        <source>Slip 1 purlwise tfl and 1 purlwise tbl. Pass 2 slipped sts to left
-                            needle and K2tog.</source>
+                        <source>Slip 1 purlwise tfl and 1 purlwise tbl. Pass 2 slipped sts to left needle and K2tog.</source>
                     </segment>
-                </unit>
+                </unit> 
 
-            </group>
+</group>
         </body>
     </file>
 </xliff>
