@@ -87,73 +87,15 @@ button {
     float: left;
 }
 
-/* Custom switch container */
-.custom-switch.always-on {
-    border-radius: 50%;
-    background-color: white;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: 40px;
-    height: 24px;
-    margin: 0 10px;
+.divInstructions {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed #bf9fac;
 }
 
-/* Hide default checkbox */
-.custom-switch .visually-hidden {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    position: absolute;
+select {
+    border-radius: 5px;
+    border-color: #bf9fac;
+    padding: 3px;
 }
-
-/* Custom slider track */
-.custom-switch .slider {
-    position: absolute;
-    cursor: pointer;
-    vertical-align: middle;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #76428c;
-    /* Blue for English */
-    border-radius: 34px;
-    transition: .4s;
-}
-
-/* Custom slider thumb */
-.custom-switch .slider:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    left: 4px;
-    bottom: 5px;
-    background-color: white;
-    border-radius: 50%;
-    transition: .4s;
-}
-
-/* Color change when toggled */
-.custom-switch input:checked+.slider {
-    background-color: #b52a82;
-    /* Green for Spanish */
-}
-
-/* Thumb movement */
-.custom-switch input:checked+.slider:before {
-    transform: translateX(18px);
-}
-
-/* Force "always on" appearance */
-.custom-switch.always-on input+.slider {
-    background-color: #76428c !important;
-    /* Always colored */
-}
-
-.custom-switch.always-on input:checked+.slider {
-    background-color: #b52a82 !important;
-    /* Only changes color */
-}
-
