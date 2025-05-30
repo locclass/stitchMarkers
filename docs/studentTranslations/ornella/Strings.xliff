@@ -1,0 +1,252 @@
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.1" version="2.1">
+    <file original="global" datatype="HTML" source-language="en-GB">
+        <body>
+            <group id="stitchNames">
+                <unit id="st_n_k">
+                    <segment>
+                        <source>Punto del derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_p">
+                    <segment>
+                        <source>Punto del revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_yo">
+                    <segment>
+                        <source>Hebra</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_co">
+                    <segment>
+                        <source>Montar puntos</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_bo">
+                    <segment>
+                        <source>Cerrar puntos</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_k2tog">
+                    <segment>
+                        <source>Tejer dos puntos juntos del derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_p2tog">
+                    <segment>
+                        <source>Tejer dos puntos juntos del revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_ssk">
+                    <segment>
+                        <source>Deslizar, deslizar, punto del derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_ssp">
+                    <segment>
+                        <source>Deslizar, deslizar, punto del revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_ktbl">
+                    <segment>
+                        <source>Tejer por la hebra trasera</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_ptbl">
+                    <segment>
+                        <source>Tejer del revés por la hebra trasera</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_M1">
+                    <segment>
+                        <source>Aumentar punto del derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_M1P">
+                    <segment>
+                        <source>Aumentar punto del revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_MB">
+                    <segment>
+                        <source>Hacer bodoque</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_nupp">
+                    <segment>
+                        <source>Nudo</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_k-b">
+                    <segment>
+                        <source>Punto del derecho en la fila inferior</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_p-b">
+                    <segment>
+                        <source>Punto del revés en la fila inferior</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_kfb">
+                    <segment>
+                        <source>Tejer por delante y por detrás</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_kyok">
+                    <segment>
+                        <source>Derecho, hebra, derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_pyop">
+                    <segment>
+                        <source>Revés, hebra, revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_s2kp">
+                    <segment>
+                        <source>Deslizar, deslizar, punto del derecho, pasar</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_sssk">
+                    <segment>
+                        <source>Deslizar tres veces, punto del derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_tw-ssk">
+                    <segment>
+                        <source>Deslizar retorcido, deslizar, punto del derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_tw-k2tog">
+                    <segment>
+                        <source>Tejer dos puntos del derecho retorcidos juntos</source>
+                    </segment>
+                </unit>
+
+            </group>
+            <group id="instructions">
+                <unit id="st_ins_k">
+                    <segment>
+                        <source>Tejer un punto del derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p">
+                    <segment>
+                        <source>Tejer un punto del revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_yo">
+                    <segment>
+                        <source>Pasar la hebra sobre la aguja derecha.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_co">
+                    <segment>
+                        <source>Hacer un nudo corredizo. Pasar el nudo por la aguja. Tirar del hilo para ajustar. Envolver el hilo alrededor del pulgar y formar un lazo. Insertar la aguja por debajo y a través del lazo. Quitar el pulgar y tirar del hilo.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_bo">
+                    <segment>
+                        <source>Insertar la punta de la aguja izquierda en el frente del punto en la aguja derecha. Levantar y pasar sobre el punto siguiente. Dejar caer el punto para que quede solo uno en la aguja derecha.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_k2tog">
+                    <segment>
+                        <source>Con el hilo por detrás, insertar la aguja derecha en los dos primeros puntos de la aguja izquierda, de izquierda a derecha, y tejerlos juntos.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p2tog">
+                    <segment>
+                        <source>Con el hilo al frente, insertar la aguja derecha en los dos primeros puntos de la aguja izquierda, de derecha a izquierda, y tejerlos del revés al mismo tiempo.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ssk">
+                    <segment>
+                        <source>Deslizar el primer y segundo punto a la aguja derecha. Pasarlos a la aguja izquierda. Tejer uno del derecho. Pasar los puntos deslizados sobre el último punto tejido.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ssp">
+                    <segment>
+                        <source>Deslizar el primer y segundo punto a la aguja derecha. Pasarlos a la aguja izquierda. Tejer uno del revés. Pasar los puntos deslizados sobre el último punto tejido.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ktbl">
+                    <segment>
+                        <source>Insertar la aguja derecha de derecha a izquierda por detrás del punto. Hacer una lazada en sentido horario y pasarla.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ptbl">
+                    <segment>
+                        <source>Con el hilo al frente, insertar la aguja derecha de izquierda a derecha por detrás del punto. Hacer una lazada en sentido antihorario y pasarla.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_M1">
+                    <segment>
+                        <source>Desde el frente, levantar la hebra entre dos puntos y colocarla en la aguja izquierda. Insertar la aguja derecha por el frente de la hebra. El hilo queda al frente del tejido. Hacer una lazada y pasarla.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_M1P">
+                    <segment>
+                        <source>Desde el frente, levantar la hebra entre dos puntos y colocarla en la aguja izquierda. Insertar la aguja derecha por detrás de la hebra. El hilo queda al frente del tejido. Hacer una lazada y pasarla.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_MB">
+                    <segment>
+                        <source>Tejer el punto deseado sin soltarlo de la aguja izquierda. Tejer el mismo punto por la hebra trasera y luego por la delantera.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_nupp">
+                    <segment>
+                        <source>De forma floja tejer un punto del derecho, sin soltar el punto de la aguja, hacer una lazada. Repetir de * a * dos veces más. Tejer un punto del derecho. Insertar la aguja izquierda por los siete puntos. Hacer una lazada y pasarla.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_k-b">
+                    <segment>
+                        <source>Insertar la aguja en el bucle debajo del primer punto de la aguja izquierda. Envolver el hilo en sentido antihorario. Pasar el hilo hacia el frente. Soltar el punto de la aguja izquierda.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p-b">
+                    <segment>
+                        <source>Llevar el hilo al frente e insertar la aguja en el bucle debajo del siguiente punto del revés desde atrás. Envolver el hilo en sentido antihorario. Pasar el hilo. Soltar el punto resultante de la aguja izquierda.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_kfb">
+                    <segment>
+                        <source>Tejer un punto del derecho sin pasar a la aguja derecha. Insertar la aguja en la hebra trasera del mismo punto de derecha a izquierda. Hacer una lazada, pasar el hilo y soltar el punto.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_kyok">
+                    <segment>
+                        <source>Tejer un punto del derecho sin soltar el punto de la aguja izquierda. Hacer una lazada. Tejer del derecho en el mismo punto.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_pyop">
+                    <segment>
+                        <source>Tejer del revés sin soltar el punto de la aguja izquierda. Hacer una lazada. Tejer del revés en el mismo punto.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_s2kp">
+                    <segment>
+                        <source>Deslizar dos puntos como para tejer. Pasarlos a la aguja izquierda y tejer dos juntos.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_sssk">
+                    <segment>
+                        <source>Deslizar tres puntos como para tejer. Pasarlos a la aguja izquierda y tejer tres juntos.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_tw-ssk">
+                    <segment>
+                        <source>Deslizar un punto como para tejer del revés. Deslizar uno del derecho. Pasar los dos puntos deslizados a la aguja izquierda y tejer dos juntos por la hebra trasera.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_tw-k2tog">
+                    <segment>
+                        <source>Deslizar un punto como para tejer del revés por el frente, y uno como para tejer del revés por detrás. Pasar ambos puntos a la aguja izquierda y tejer dos juntos del derecho.</source>
+                    </segment>
+                </unit>
+
+            </group>
+        </body>
+    </file>
+</xliff>

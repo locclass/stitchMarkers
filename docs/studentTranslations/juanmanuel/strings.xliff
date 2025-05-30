@@ -1,0 +1,252 @@
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.1" version="2.1">
+    <file original="global" datatype="HTML" source-language="en-GB">
+        <body>
+            <group id="stitchNames">
+                <unit id="st_n_k">
+                    <segment>
+                        <source>Derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_p">
+                    <segment>
+                        <source>Revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_yo">
+                    <segment>
+                        <source>Hebra lazada</source> <!--Preguntarle a la Iaia-->
+                    </segment>
+                </unit>
+                <unit id="st_n_co">
+                    <segment>
+                        <source>Montar puntos</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_bo">
+                    <segment>
+                        <source>Rematar</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_k2tog">
+                    <segment>
+                        <source>Tejer 2 puntos juntos</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_p2tog">
+                    <segment>
+                        <source>Tejer 2 puntos del revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_ssk">
+                    <segment>
+                        <source>Desliza, desliza, derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_ssp">
+                    <segment>
+                        <source>Desliza, desliza, revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_ktbl">
+                    <segment>
+                        <source>Derecho retorcido</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_ptbl">
+                    <segment>
+                        <source>Revés retorcido</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_M1">
+                    <segment>
+                        <source>Aumento</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_M1P">
+                    <segment>
+                        <source>Aumento del revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_MB">
+                    <segment>
+                        <source>Punto burbuja</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_nupp">
+                    <segment>
+                        <source>Punto nuez</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_k-b">
+                    <segment>
+                        <source>Punto derecho en la carrera siguiente</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_p-b">
+                    <segment>
+                        <source>Punto revés en la carrera siguiente</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_kfb">
+                    <segment>
+                        <source>Tejer frente y detrás</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_kyok">
+                    <segment>
+                        <source>Aumento, lazada, aumento</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_pyop">
+                    <segment>
+                        <source>Revés, lazada, revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_s2kp">
+                    <segment>
+                        <source>Desliza 2, derecho, pasa</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_sssk">
+                    <segment>
+                        <source>Desliza 3, derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_tw-ssk">
+                    <segment>
+                        <source>Desliza girando, desliza, derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_n_tw-k2tog">
+                    <segment>
+                        <source>2 puntos juntos girados</source>
+                    </segment>
+                </unit>
+
+            </group>
+            <group id="instructions">
+                <unit id="st_ins_k">
+                    <segment>
+                        <source>Teje uno del derecho</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p">
+                    <segment>
+                        <source>Teje uno del revés</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_yo">
+                    <segment>
+                        <source>Lazar la lana por encima de la aguja.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_co">
+                    <segment>
+                        <source>Haz un nudo corredizo al rededor de la aguja. Tira de la lana para ajustarlo. Haz un nudo al rededor de tu pulgar con la lana en uso. Pasa la aguja por debajo y a través del nudo en tu pulgar. Saca tu pulgar del nudo y tira de la lana.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_bo">
+                    <segment>
+                        <source>Pasa la punta de la aguja izquierda por el frente del punto a la derecha en la aguja derecha. Pásalo por encima del punto a mano izquierda. Deja que el punto caiga de la aguja izquierda para que solo haya un punto en la aguja derecha.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_k2tog">
+                    <segment>
+                        <source>Con la hebra atrás, mete la aguja derecha en los primeros dos puntos de la aguja izquierda, de izquierda a derecha, y teje ambos al mismo tiempo. </source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p2tog">
+                    <segment>
+                        <source>Con la hebra al frente, mete la aguja derecha en los primeros dos puntos de la aguja izquierda, de derecha a izquierda, y teje ambos al revés al mismo tiempo.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ssk">
+                    <segment>
+                        <source>Desliza los primeros dos puntos hacia la aguja derecha. Pásalos a la aguja izquierda. Teje uno y pasa el punto deslizado sobre el último punto.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ssp">
+                    <segment>
+                        <source>Desliza los primeros dos puntos hacia la aguja derecha. Pásalos a la aguja izquierda. Teje uno del revés y pasa el punto deslizado sobre el último punto.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ktbl">
+                    <segment>
+                        <source>Pasa la aguja derecha de derecha a izquierda por atrás del pto. H / laz en sentido horario y tira de la hebra.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ptbl">
+                    <segment>
+                        <source>Hf, pasa la aguja derecha de derecha a izquierda por atrás del pto. H / laz en sentido antihorario y tira de la hebra.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_M1">
+                    <segment>
+                        <source>De frente, toma la hebra entre dos ptos. y levántala con la aguja izquierda. Pasa la aguja derecha por la hebra delantera del punto. Con la hebra en la delantera, h / laz y tira.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_M1P">
+                    <segment>
+                        <source>De frente, toma la hebra entre dos ptos. y levántala con la aguja izquierda. Pasa la aguja derecha por la hebra trasera del punto. Con la hebra en la delantera, h / laz y tira.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_MB">
+                    <segment>
+                        <source>Teje en el punto deseado sin soltar el punto de la aguja izquierda. Teje el mismo pto. por el punto trasero, y luego por el delantero.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_nupp">
+                    <segment>
+                        <source>Teje *un punto derecho, sin soltar el punto de la aguja h / laz*. Repite de * a * 2 veces más. Teje un punto más. Pasa la aguja izquierda por los 7 ptos. H / laz y tira.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_k-b">
+                    <segment>
+                        <source>Pasa la aguja por el punto debajo del primer punto en la aguja izquierda. Envuelve la hebra en la aguja en dirección antihoraria. Pasa la hebra hacia el frente. Suelta el punto de la aguja izquierda.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p-b">
+                    <segment>
+                        <source>Pasa la hebra hacia el frente y pasa por detrás el punto por debajo del siguiente punto del revés. Envuelve la hebra en la aguja en dirección antihoraria. Pasa la hebra hacia el frente. Suelta el punto de la aguja izquierda.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_kfb">
+                    <segment>
+                        <source>Teje un punto al derecho sin deslizar hacia la aguja derecha. Pasa la aguja por detrás de ese punto de derecha a izquierda. H / laz, pasa la hebra y suelta el punto.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_kyok">
+                    <segment>
+                        <source>Teje un punto del derecho sin deslizar hacia la aguja izquierda. H / laz y teje otro punto derecho en el mismo punto.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_pyop">
+                    <segment>
+                        <source>Teje un punto del revés sin deslizar hacia la aguja izquierda. H / laz y teje otro punto del revés en el mismo punto.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_s2kp">
+                    <segment>
+                        <source>Desliza dos puntos juntos. Teje un punto derecho y desliza los puntos delizados por encima.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_sssk">
+                    <segment>
+                        <source>Desliza tres puntos del derecho. Pasa a la aguja izquierda y teje tres puntos juntos.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_tw-ssk">
+                    <segment>
+                        <source>Desliza un punto del revés y otro del derecho. Pasa los dos ptos. deslizados hacia la aguja izquierda y teje dos puntos juntos por la hebra trasera del punto.</source>
+                    </segment>
+                </unit>
+                <unit id="st_ins_tw-k2tog">
+                    <segment>
+                        <source>Desliza un punto del revés por la hebra delantera del punto y otro por la hebra delantera. Pasa los dos ptos. deslizados a la aguja izquierda y teje dos puntos juntos.</source>
+                    </segment>
+                </unit>
+
+            </group>
+        </body>
+    </file>
+</xliff>

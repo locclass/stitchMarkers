@@ -10,4 +10,4 @@ Change file name to `strings.xliff`
 
 - `script.js`:
 Line #50 - change `defaultStrings.xliff` to `strings.xliff`
-Line #141 - change `symbols/` to `../../symbols`.
+Line #141 - change `symbols/` to `../../symbols/`.

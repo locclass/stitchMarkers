@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcd7e6;
+    color: #fcd7e6
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#mainContainer {
+    padding-left: 20px;
+    padding-top: 20px;
+    margin: auto;
+    margin-top: 10px;
+    border: 20px solid #3a3840;
+    border-radius: 20px;
+    height: 500px;
+    max-width: 800px;
+    background-color: #fcd7e6;
+}
+
+#myModal .modal-content {
+    width: 500px;
+    display: flex;
+}
+
+#choose-sel {
+    width: max-content;
+    margin: 5px;
+    padding: 2px;
+}
+
+#numReps {
+    width: 50px;
+    margin: 5px;
+    padding: 2px;
+}
+
+#divForBtnConfirm {
+    display: flex;
+    justify-content: right;
+}
+
+button {
+    width: max-content;
+    border-radius: 5px !important;
+    border-color: lightslategray;
+}
+
+.row div {
+    width: 200px;
+    float: left;
+}
+
+.divInstructions {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed #bf9fac;
+}
+
+select {
+    border-radius: 5px;
+    border-color: #bf9fac;
+    padding: 3px;
+}
+
+#numRow {
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #bf9fac;
+}

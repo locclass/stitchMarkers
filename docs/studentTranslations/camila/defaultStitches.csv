@@ -1,0 +1,25 @@
+nombre;abreviatura;instruciones
+Tejer;D;un punto
+Revés;R;un punto del revés
+Lazada;laz;Envolver la lana alrededor de la aguja derecha.
+Rematar;co;Hacer un nudo corredizo. Colocar el nudo en la aguja. Ajustar el nudo tirando de la lana. Envolver la lana utilizada alrededor del pulgar para formar un anillo. Pasar la aguja por debajo y a través del anillo. Sacar el pulgar Remove your thumb del anillo y ajustar la lana.
+Bind off;bo;Insertar la punto de la aguja izquierda en el frente del punto derecho en la aguja derecha. Levantar y pasar por encima del punto de la aguja izquierda. Dejar caer el punto de la aguja izquierda, dejando solo un punto en la aguja derecha.
+Tejer 2 puntos juntos;2pjD;Con la lana atrás, insertar la aguja derecha en los primeros dos puntos de la aguja izquierda, de izquierda a derecha y tejer ambos a la vez.
+Tejer 2 puntos juntos del revés;2pjR;Con la lana al frente, insertar la aguja derechaen los primeros dos puntos de la aguja izquierda, de derecha a izquierda, y tejer al revés ambos a la vez.
+Desliza, desliza y teje;DDT;Deslizar los dos primeros puntos a la aguja derecha. Pasarlos a la aguja izquierda. Tejer 1. Pasar el punto deslizado por encima del último punto.
+Desliza, desliza y revés;DDR;Deslizar los dos primeros puntos a la aguja derecha.  Pasarlos a la aguja izquierda. Tejer uno al revés. Pasar el punto deslizado por encima del último punto.
+Punto derecho retorcido;Dret;Insertar la aguja derecha a izquierda por detrás del punto.  Hacer una lazada en sentido horario y sacar la lana.
+Punto revés retorcido;Rret;Con la lana al frente, insertar la aguja derecha de izquierda a derecha por detrás del punto.  Hacer una lazada en sentido antihorario y sacar la lana.
+Aumentar uno;M1;Desde el frente, levantar la hebra entre dos puntos y colocarla en la aguja izquierda. Insertar la aguja derecha por el frente. Con la lana al frente del trabajo, hacer una lazada y sacar el hilo.
+Aumentar uno al revés;M1P;Desde el frente, levantar la hebra entre dos puntos y colocarla en la aguja izquierda. Insertar la aguja derecha por detrás. Con la lana al frente del trabajo, hacer una lazada y sacar el hilo.
+Bodoque;BP;Tejer el punto deseado sin soltarlo de la aguja izquierda. Tejer el mismo punto por detrás, luego por delante otra vez.
+Nupp;nupp;Tener flojo el *D1, sin soltar el punto lazado*. Repetir de * a * dos veces más. D1. Insertar la aguja izquierda por los 7 puntos. Hacer una lazada y pasarla.
+Punto de la vuelta anterior;P.V.A;Insertar la aguja en el lazo debajo del primer punto de la aguja izquierda. Enrollar el hilo en sentido antihorario. Sacar el hilo hacia adelante. Soltar el punto de la aguja izquierda.
+Revés en la vuelta anterior;p-b;Con la lana al frente, insertar la aguja por detrás del lazo debajo del siguiente punto al revés. Enrollar el hilo en sentido antihorario. Sacar el hilo. Soltar el punto resultante de la aguja izquierda.
+Tejer delante y detrás;kfb;D1 sin pasarlo a la aguja derecha. Insertar la aguja en la hebra de atrás del mismo punto de derecha a izquierda. Hacer lazada, sacar hilo y soltar el punto.
+Tejer, lazada, tejer;DlazD;D1 sin soltar el punto de la aguja izquierda. Hacer una lazada. Tejer el mismo punto nuevamente.
+Revés, lazada, revés;pyop;R1 sin soltar el punto. Hacer una lazada. Tejer el mismo punto nuevamente al revés.
+Disminución doble centrada;ddc;Deslizar 2 puntos juntos. D1. Pasar los puntos deslizados por encima.
+Disminución de punto;dddD;Deslizar 3 puntos como si fueras a tejer. Pasarlos a la aguja izquierda y 3pjD.
+Deslizar torcido, deslizar, tejer;tw-ssk;Deslizar 1 punto al revés. Deslizar 1 punto como para tejer. Pasar ambos puntos a la aguja izquierda y tejerlos juntos por la hebra de atrás.
+Tejer dos puntos torcidos;2pjT;Deslizar 1 punto al revés por el frente y 1 punto al revés por detrás. Pasar ambos a la aguja izquierda y tejerlos juntos por la hebra de atrás.
