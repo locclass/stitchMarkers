@@ -194,6 +194,7 @@ function showRowExplanation() {
         paragraph.innerHTML = "";
         for (let j = 0; j < rowStitchesReps.length; j++) {
             let st = findStitch(rowStitches[j].replace(".jpg", ""));
+            // "beforeend" must NOT be modified nor erased
             paragraph.insertAdjacentText("beforeend", "\n" + "Work \"" + (st[1]).toLowerCase() + "\" stitch");
             if (rowStitchesReps[j] != 1) {
                 paragraph.insertAdjacentText("beforeend", " " + rowStitchesReps[j] + " times.");
