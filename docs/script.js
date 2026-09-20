@@ -133,7 +133,7 @@ async function listDirectoryNames() {
 
   console.log(items
     .filter(item => item.type === 'dir')
-    .map(item => item.name);) 
+    .map(item => item.name)) 
 
 }
 
