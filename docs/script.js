@@ -107,34 +107,37 @@ async function loadStitchesFromFile(xliffPath) {
 }
 
 async function loadTranslations() {
-    let selectTranslations = document.getElementById("selTranslations");4
-    await listDirectoryNames();
-    // const response = await fetch("studentTranslations",{
-    //     method: "GET",
-    //     mode: "cors",
-    //     headers: {
-    //         "Access-Control-Allow-Origin": "*"
-    //     }
-    // });
-    // alert(await response.text());
+    let selectTranslations = document.getElementById("selTranslations");
+    let dirNames = await listDirectoryNames();
 
-    
+    for (let i = 0; i < dirNames.length; i++) {
+        let name = dirNames[i];
+        let opt = document.createElement("option");
+        opt.value = name + "/index.html";
+        opt.text = name;
+        selectTranslations.appendChild(opt);
+    }
 }
 
 async function listDirectoryNames() {
-  const url = `https://api.github.com/repos/locclass/stitchmarkers/contents/studentTranslations`;
-  const response = await fetch(url);
+    const url = `https://api.github.com/repos/locclass/stitchMarkers/contents/studentTranslations`;
 
-  if (!response.ok) {
-    throw new Error(`GitHub API error: ${response.status}`);
-  }
+    try {
+        const response = await fetch(url);
 
-  const items = await response.json();
+        if (!response.ok) {
+            throw new Error(`GitHub API error: ${response.status}`);
+        }
 
-  console.log(items
-    .filter(item => item.type === 'dir')
-    .map(item => item.name)) 
+        const items = await response.json();
 
+        return items
+            .filter(item => item.type === 'dir')
+            .map(item => item.name);
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
 }
 
 function loadStitchesToBoxes() {
