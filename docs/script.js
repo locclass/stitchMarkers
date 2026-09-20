@@ -107,15 +107,34 @@ async function loadStitchesFromFile(xliffPath) {
 }
 
 async function loadTranslations() {
-    let selectTranslations = document.getElementById("selTranslations");
-    const response = await fetch("studentTranslations",{
-        method: "GET",
-        mode: "cors",
-        headers: {
-            "Access-Control-Allow-Origin": "*"
-        }
-    });
-    alert(await response.text());
+    let selectTranslations = document.getElementById("selTranslations");4
+    await listDirectoryNames();
+    // const response = await fetch("studentTranslations",{
+    //     method: "GET",
+    //     mode: "cors",
+    //     headers: {
+    //         "Access-Control-Allow-Origin": "*"
+    //     }
+    // });
+    // alert(await response.text());
+
+    
+}
+
+async function listDirectoryNames() {
+  const url = `https://api.github.com/repos/locclass/stitchmarkers/contents/studentTranslations`;
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`GitHub API error: ${response.status}`);
+  }
+
+  const items = await response.json();
+
+  console.log(items
+    .filter(item => item.type === 'dir')
+    .map(item => item.name);) 
+
 }
 
 function loadStitchesToBoxes() {
