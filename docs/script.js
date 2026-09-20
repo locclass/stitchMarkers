@@ -51,6 +51,8 @@ function addListeners() {
 
     loadStitchesFromFile('defaultStrings.xliff');
 
+    loadTranslations();
+
     btnConfirmInst.addEventListener('click', showInstructions);
 
     btnConfirmRowInst.addEventListener('click', showRowExplanation)
@@ -102,6 +104,18 @@ async function loadStitchesFromFile(xliffPath) {
         console.log(error)
     }
     return;
+}
+
+async function loadTranslations() {
+    let selectTranslations = document.getElementById("selTranslations");
+    const response = await.fetch("studentTranslations",{
+        method: "GET",
+        mode: "cors",
+        headers: {
+            "Access-Control-Allow-Origin": "*"
+        }
+    });
+    alert(await response);
 }
 
 function loadStitchesToBoxes() {
@@ -208,7 +222,6 @@ function showRowExplanation() {
 }
 
 function getShortHand(str) {
-    //let aux = str.split("symbols/");
     str = str.replace("symbols/", "");
     str = str.replace(".jpg", "");
     return str;
