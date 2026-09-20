@@ -120,7 +120,7 @@ async function loadTranslations() {
 }
 
 async function listDirectoryNames() {
-    const url = `https://api.github.com/repos/locclass/stitchMarkers/contents/studentTranslations`;
+    const url = `https://api.github.com/repos/locclass/stitchMarkers/contents/docs/studentTranslations`;
 
     try {
         const response = await fetch(url);
