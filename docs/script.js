@@ -115,7 +115,7 @@ async function loadTranslations() {
             "Access-Control-Allow-Origin": "*"
         }
     });
-    alert(await response);
+    alert(await response.text());
 }
 
 function loadStitchesToBoxes() {
