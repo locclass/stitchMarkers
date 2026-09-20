@@ -108,7 +108,7 @@ async function loadStitchesFromFile(xliffPath) {
 
 async function loadTranslations() {
     let selectTranslations = document.getElementById("selTranslations");
-    const response = await.fetch("studentTranslations",{
+    const response = await fetch("studentTranslations",{
         method: "GET",
         mode: "cors",
         headers: {
