@@ -120,17 +120,18 @@ async function loadTranslations() {
 }
 
 async function beautify(dirname) {
-    let prettytext;
+    let aux;
     if (dirname.indexOf('_') != -1) {
-        prettytext = dirname.split('_');
+        aux = dirname.split('_');
     } else {
-        prettytext = [dirname];
+        aux = [dirname];
     }
-    prettytext.forEach(element => {
+    let prettytext;
+    aux.forEach(element => {
         let firstChar = element.charAt(0);
         console.log(firstChar);
-        element = firstChar.toUpperCase() + element.slice(1);
-        console.log(element);
+        prettytext.append(firstChar.toUpperCase() + element.slice(1));
+        console.log(prettytext);
     });
     prettytext = prettytext.join(' - ');
     console.log(prettytext);
