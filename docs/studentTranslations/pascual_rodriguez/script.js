@@ -1,7 +1,7 @@
 localStorage.setItem("numRows", 1);
 localStorage.setItem("stitchDefs", "");
 
-// html object definitions
+// html definición de objetos
 let modal;
 let btnCloseModal;
 let selectBox;
@@ -39,7 +39,7 @@ function addListeners() {
         numRows++;
         localStorage.setItem("numRows", numRows);
 
-        // create new row
+        // crear nueva fila
         let divRows = document.getElementById("divRows");
         let newRow = document.createElement('div');
         newRow.id = ('row' + numRows).toString();
@@ -56,7 +56,7 @@ function addListeners() {
     btnConfirmRowInst.addEventListener('click', showRowExplanation)
 }
 
-// load stitches to select box
+// cargar puntos para seleccionar caja
 async function loadStitchesFromFile(xliffPath) {
     let lanOption;
     if (xliffPath == "defaultStrings.xliff") {
@@ -111,7 +111,7 @@ function loadStitchesToBoxes() {
     let selectInstructions = document.getElementById("sel-inst");
     let defaultValue = document.createElement("option");
     defaultValue.value = null;
-    defaultValue.innerHTML = "Seleccione un punto"
+    defaultValue.innerHTML = "Select a stitch"
     selectBox.appendChild(defaultValue);
     selectInstructions.appendChild(defaultValue);
 
@@ -131,7 +131,7 @@ function loadStitchesToBoxes() {
 }
 
 function addStitchToRow(stValue, numReps) {
-    // I'm expecting stValue to be the id
+    // Espero que stValue sea id
     let stShortHand = stValue.replace("opt_", "");
     let allStitches = localStorage.getItem("stitchDefs").split('|');
     let fullSt;
@@ -142,7 +142,7 @@ function addStitchToRow(stValue, numReps) {
 
     let activeRow = document.getElementById(('row' + localStorage.getItem("numRows")).toString());
     let img = document.createElement("img");
-    img.src = "../../symbols" + fullSt[0] + ".jpg";
+    img.src = "../../symbols/" + fullSt[0] + ".jpg";
     img.style = "width: 50px; height: 50px; padding: 2px;"
     for (let i = 0; i < numReps; i++) {
         document.getElementById(activeRow.id).appendChild(img.cloneNode())
@@ -166,7 +166,7 @@ function showRowExplanation() {
     let allRows = document.getElementById('divRows');
     allRows = allRows.getElementsByTagName('div');
     if (allRows.length < rowNumber) {
-        alert('Seleccione un número menor o igual' + allRows.length);
+        alert('Por favor seleccione un número menor o igual a ' + allRows.length);
     } else {
         let selectedRow = allRows[rowNumber - 1];
         let rowStitchesImg = selectedRow.getElementsByTagName('img');
@@ -195,9 +195,9 @@ function showRowExplanation() {
         for (let j = 0; j < rowStitchesReps.length; j++) {
             let st = findStitch(rowStitches[j].replace(".jpg", ""));
             // "beforeend" must NOT be modified nor erased
-            paragraph.insertAdjacentText("beforeend", "\n" + "\"" + (st[1]).toLowerCase() + "\");
+            paragraph.insertAdjacentText("beforeend", "\n" + "Work \"" + (st[1]).toLowerCase() + "\" stitch");
             if (rowStitchesReps[j] != 1) {
-                paragraph.insertAdjacentText("beforeend", " " + rowStitchesReps[j] + " veces.");
+                paragraph.insertAdjacentText("beforeend", " " + rowStitchesReps[j] + " times.");
             } else {
                 paragraph.insertAdjacentText("beforeend", ".");
             }

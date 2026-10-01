@@ -114,9 +114,24 @@ async function loadTranslations() {
         let name = dirNames[i];
         let opt = document.createElement("option");
         opt.value = name + "/index.html";
-        opt.text = name;
+        opt.text = beautify(name);
         selectTranslations.appendChild(opt);
     }
+}
+
+function beautify(dirname) {
+    let prettytext;
+    if (String.indexOf(dirname, '_') != -1) {
+        prettytext = dirname.split('_');
+    } else {
+        prettytext = [dirname];
+    }
+    prettytext.array.forEach(element => {
+        element = element.charAt(0).toUpperCase() + element.slice(1);
+    });
+    prettytext = prettytext.join(' - ');
+    console.log(prettytext);
+    return prettytext;
 }
 
 async function listDirectoryNames() {
@@ -218,7 +233,7 @@ function showRowExplanation() {
                 if (rowStitches[rowStitches.length - 1] == currentSt[1]) {
                     let numRepetitions = parseInt(rowStitchesReps[rowStitchesReps.length - 1]);
                     rowStitchesReps[rowStitchesReps.length - 1] = numRepetitions + 1;
-                    
+
                 } else {
                     rowStitches.push(currentSt[1]);
                     rowStitchesReps.push(1);
