@@ -128,7 +128,9 @@ async function beautify(dirname) {
     }
     prettytext.forEach(element => {
         let firstChar = element.charAt(0);
+        console.log(firstChar);
         element = firstChar.toUpperCase() + element.slice(1);
+        console.log(element);
     });
     prettytext = prettytext.join(' - ');
     console.log(prettytext);
