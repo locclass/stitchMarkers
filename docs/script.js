@@ -126,7 +126,7 @@ async function beautify(dirname) {
     } else {
         aux = [dirname];
     }
-    let prettytext;
+    let prettytext = [];
     aux.forEach(element => {
         let firstChar = element.charAt(0);
         console.log(firstChar);
