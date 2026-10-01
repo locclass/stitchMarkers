@@ -51,6 +51,8 @@ function addListeners() {
 
     loadStitchesFromFile('strings.xliff');
 
+    loadTranslations();
+
     btnConfirmInst.addEventListener('click', showInstructions);
 
     btnConfirmRowInst.addEventListener('click', showRowExplanation)
@@ -103,6 +105,57 @@ async function loadStitchesFromFile(xliffPath) {
     }
     return;
 }
+
+async function loadTranslations() {
+    let selectTranslations = document.getElementById("selTranslations");
+    let dirNames = await listDirectoryNames();
+
+    for (let i = 0; i < dirNames.length; i++) {
+        let name = dirNames[i];
+        let opt = document.createElement("option");
+        opt.value = name + "/index.html";
+        opt.text = await beautify(name);
+        selectTranslations.appendChild(opt);
+    }
+}
+
+async function beautify(dirname) {
+    let aux;
+    if (dirname.indexOf('_') != -1) {
+        aux = dirname.split('_');
+    } else {
+        aux = [dirname];
+    }
+    let prettytext = [];
+    aux.forEach(element => {
+        let firstChar = element.charAt(0);
+        prettytext.push(firstChar.toUpperCase() + element.slice(1));
+    });
+    prettytext = prettytext.join(' ');
+    return prettytext;
+}
+
+async function listDirectoryNames() {
+    const url = `https://api.github.com/repos/locclass/stitchMarkers/contents/docs/studentTranslations`;
+
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`GitHub API error: ${response.status}`);
+        }
+
+        const items = await response.json();
+
+        return items
+            .filter(item => item.type === 'dir')
+            .map(item => item.name);
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
+}
+
 
 function loadStitchesToBoxes() {
     let stitchDefs = localStorage.getItem("stitchDefs").split('|');
