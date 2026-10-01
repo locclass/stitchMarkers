@@ -114,19 +114,19 @@ async function loadTranslations() {
         let name = dirNames[i];
         let opt = document.createElement("option");
         opt.value = name + "/index.html";
-        opt.text = beautify(name);
+        opt.text = await beautify(name);
         selectTranslations.appendChild(opt);
     }
 }
 
-function beautify(dirname) {
+async function beautify(dirname) {
     let prettytext;
     if (dirname.indexOf('_') != -1) {
         prettytext = dirname.split('_');
     } else {
         prettytext = [dirname];
     }
-    prettytext.array.forEach(element => {
+    prettytext.forEach(element => {
         element = element.charAt(0).toUpperCase() + element.slice(1);
     });
     prettytext = prettytext.join(' - ');
