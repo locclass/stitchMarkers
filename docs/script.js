@@ -121,7 +121,7 @@ async function loadTranslations() {
 
 function beautify(dirname) {
     let prettytext;
-    if (String.indexOf(dirname, '_') != -1) {
+    if (dirname.indexOf('_') != -1) {
         prettytext = dirname.split('_');
     } else {
         prettytext = [dirname];
