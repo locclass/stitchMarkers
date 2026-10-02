@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.1" version="2.1">
+    <file original="global" datatype="HTML" source-language="en-GB" target-language="es-UY">
+        <body>
+            <group id="stitchNames">
+                <unit id="st_n_k">
+                    <segment>
+                        <source>Knit</source>
+                        <target>Punto derecho</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_p">
+                    <segment>
+                        <source>Purl</source>
+                        <target>Punto revés</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_yo">
+                    <segment>
+                        <source>Yarn over</source>
+                        <target>Lazada</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_co">
+                    <segment>
+                        <source>Cast on</source>
+                        <target>Montar puntos</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_bo">
+                    <segment>
+                        <source>Bind off</source>
+                        <target>Cerrar puntos</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_k2tog">
+                    <segment>
+                        <source>Knit two together</source>
+                        <target>Tejer dos puntos juntos</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_p2tog">
+                    <segment>
+                        <source>Purl two together</source>
+                        <target>Tejer dos puntos del revés juntos</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_ssk">
+                    <segment>
+                        <source>Slip slip knit</source>
+                        <target>Deslizar, deslizar, tejer</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_ssp">
+                    <segment>
+                        <source>Slip slip purl</source>
+                        <target>Deslizar, deslizar, tejer del revés</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_ktbl">
+                    <segment>
+                        <source>Knit through back loop</source>
+                        <target>Tejer por la hebra trasera</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_ptbl">
+                    <segment>
+                        <source>Purl through back loop</source>
+                        <target>Tejer del revés por la hebra trasera</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_M1">
+                    <segment>
+                        <source>Make one</source>
+                        <target>Hacer un aumento</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_M1P">
+                    <segment>
+                        <source>Make one purlwise</source>
+                        <target>Hacer un aumento del revés</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_MB">
+                    <segment>
+                        <source>Make bobble</source>
+                        <target>Hacer un bodoque</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_nupp">
+                    <segment>
+                        <source>Nupp</source>
+                        <target>Nupp</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_k-b">
+                    <segment>
+                        <source>Knit stitch in row below</source>
+                        <target>Punto derecho en la vuelta inferior</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_p-b">
+                    <segment>
+                        <source>Purl stitch in row below</source>
+                        <target>Punto revés en la vuelta inferior</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_kfb">
+                    <segment>
+                        <source>Knit front and back</source>
+                        <target>Tejer por delante y por detrás</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_kyok">
+                    <segment>
+                        <source>Knit, yarn over, knit</source>
+                        <target>Punto derecho, lazada, punto derecho</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_pyop">
+                    <segment>
+                        <source>Purl, yarn over, purl</source>
+                        <target>Punto revés, lazada, punto revés</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_s2kp">
+                    <segment>
+                        <source>Slip, slip, knit, pass</source>
+                        <target>Deslizar dos, tejer uno, pasar</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_sssk">
+                    <segment>
+                        <source>Slip, slip, slip, knit</source>
+                        <target>Deslizar, deslizar, deslizar, tejer</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_tw-ssk">
+                    <segment>
+                        <source>Twisted slip, slip, knit</source>
+                        <target>Deslizamiento retorcido, deslizamiento, tejer</target>
+                    </segment>
+                </unit>
+                <unit id="st_n_tw-k2tog">
+                    <segment>
+                        <source>Twisted knit two together</source>
+                        <target>Tejer dos puntos juntos retorcidos</target>
+                    </segment>
+                </unit>
+            </group>
+            <group id="instructions">
+                <unit id="st_ins_k">
+                    <segment>
+                        <source>Knit one</source>
+                        <target>Tejer un punto derecho</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p">
+                    <segment>
+                        <source>Purl one</source>
+                        <target>Tejer un punto del revés</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_yo">
+                    <segment>
+                        <source>Pass yarn over the right needle.</source>
+                        <target>Pasá la hebra por encima de la aguja derecha.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_co">
+                    <segment>
+                        <source>Make a slip knot. Slide slip knot onto needle. Pull yarn to tighten
+                            knot. Wrap the working yarn around your thumb so you have a loop around
+                            your thumb. Bring the needle under and up through the loop around your
+                            thumb. Remove your thumb from the loop and pull the yarn.</source>
+                        <target>Hacé un nudo corredizo. Colocá el nudo corredizo en la aguja. Tirá de la hebra para ajustar el nudo. Enrollá la hebra de trabajo alrededor del pulgar, de modo que quede un bucle alrededor del pulgar. Pasá la aguja por debajo y hacia arriba, a través del bucle que rodea el pulgar. Retirá el pulgar del bucle y tirá de la hebra.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_bo">
+                    <segment>
+                        <source>Insert the tip of the left needle into the front of the right-hand
+                            st on the right needle. Lift up and over the left-hand st. Allow st on
+                            the left needle to drop off the needle, leaving just one stitch on the
+                            right needle.</source>
+                        <target>Introducí la punta de la aguja izquierda por la parte delantera del punto de la aguja derecha. Levantá el punto y pasalo por encima del punto de la aguja izquierda. Dejá que el punto de la aguja izquierda se deslice fuera de la aguja, dejando solo un punto en la aguja derecha.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_k2tog">
+                    <segment>
+                        <source>With yarn at back, enter your right needle into the first two
+                            stitches in your left needle, from left to right, and knit both at the
+                            same time.</source>
+                        <target>Con la hebra por detrás de la labor, introducí la aguja derecha en los dos primeros puntos de la aguja izquierda, de izquierda a derecha, y tejelos juntos.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p2tog">
+                    <segment>
+                        <source>With yarn at front, enter your right needle into the first two
+                            stitches in your left needle, from right to left, and purl both at the
+                            same time.</source>
+                        <target>Con la hebra por delante de la labor, introducí la aguja derecha en los dos primeros puntos de la aguja izquierda, de derecha a izquierda, y tejelos juntos del revés.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ssk">
+                    <segment>
+                        <source>Slip first and second sts onto the right needle. Pass to left
+                            needle. K1. Pass slipped st over last st.</source>
+                        <target>Deslizá el primer y el segundo punto a la aguja derecha. Pasalos a la aguja izquierda. Tejé un punto derecho. Pasá los puntos deslizados por encima del último punto.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ssp">
+                    <segment>
+                        <source>Slip first and second sts onto the right needle. Pass to left
+                            needle. P1. Pass slipped st over last st.</source>
+                        <target>Deslizá el primer y el segundo punto a la aguja derecha. Pasalos a la aguja izquierda. Tejé un punto del revés. Pasá los puntos deslizados por encima del último punto.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ktbl">
+                    <segment>
+                        <source>Insert right needle from right to left in back of st. YO clockwise
+                            and pull through.</source>
+                        <target>Introducí la aguja derecha de derecha a izquierda por la hebra trasera del punto. Hacé una lazada en el sentido de las agujas del reloj y tirá de la hebra para pasarla.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_ptbl">
+                    <segment>
+                        <source>Wyif,insert right needle from left to right in back of st. YO
+                            counter-clockwise and pull through.</source>
+                        <target>Con la hebra por delante de la labor, introducí la aguja derecha de izquierda a derecha por la hebra trasera del punto. Hacé una lazada en sentido antihorario y tirá de la hebra para pasarla.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_M1">
+                    <segment>
+                        <source>From the front, pick up strand between two sts and lift to left
+                            needle. Insert right needle tfl. Yarn is in front of work. YO and pull
+                            through.</source>
+                        <target>Desde el frente, recogé la hebra que queda entre dos puntos y subila a la aguja izquierda. Introducí la aguja derecha por la hebra delantera. La hebra queda delante de la labor. Hacé una lazada y tirá de la hebra para pasarla.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_M1P">
+                    <segment>
+                        <source>From the front, pick up strand between two sts and lift to left
+                            needle. Insert right needle tbl. Yarn is in front of work. YO and pull
+                            through.</source>
+                        <target>Desde el frente, recogé la hebra que queda entre dos puntos y subila a la aguja izquierda. Introducí la aguja derecha por la hebra trasera. La hebra queda delante de la labor. Hacé una lazada y tirá de la hebra para pasarla.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_MB">
+                    <segment>
+                        <source>Knit into desired st without dropping the loop off the left needle.
+                            Knit same st through back loop, then through front loop.</source>
+                        <target>Tejé el punto deseado sin sacar el bucle de la aguja izquierda. Tejé el mismo punto por la hebra trasera y después por la hebra delantera.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_nupp">
+                    <segment>
+                        <source>Loosely *K1, without slipping the stitch off the needle YO*. Repeat
+                            from * to * 2 more times. K1. Insert left needle through all 7 sts. YO
+                            and pull through.</source>
+                        <target>Sin apretar, *tejé 1 punto derecho sin deslizarlo de la aguja, hacé una lazada*. Repetí de * a * dos veces más. Tejé 1 punto derecho. Introducí la aguja izquierda a través de los 7 puntos. Hacé una lazada y tirá de la hebra para pasarla.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_k-b">
+                    <segment>
+                        <source>Insert needle into loop below the first stitch on left needle. Wrap
+                            yarn around needle counter-clockwise. Pull yarn through towards the
+                            front. Drop stitch off left needle.</source>
+                        <target>Introducí la aguja en el bucle situado debajo del primer punto de la aguja izquierda. Enrollá la hebra alrededor de la aguja en sentido antihorario. Tirá de la hebra hacia el frente para pasarla. Deslizá el punto fuera de la aguja izquierda.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_p-b">
+                    <segment>
+                        <source>Bring yarn to front and enter loop below next purl stitch from
+                            behind. Wrap yarn around needle counter-clockwise. Pull yarn through.
+                            Drop resulting stitch off left needle.</source>
+                        <target>Llevá la hebra hacia delante e introducí la aguja en el bucle situado debajo del siguiente punto del revés desde atrás. Enrollá la hebra alrededor de la aguja en sentido antihorario. Tirá de la hebra para pasarla. Deslizá el punto resultante fuera de la aguja izquierda.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_kfb">
+                    <segment>
+                        <source>K1 without slipping to right needle. Insert needle into back loop of
+                            same st from right to left. YO, pull yarn through and drop st.</source>
+                        <target>Tejé 1 punto derecho sin deslizarlo a la aguja derecha. Introducí la aguja en la hebra trasera del mismo punto, de derecha a izquierda. Hacé una lazada, tirá de la hebra para pasarla y deslizá el punto.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_kyok">
+                    <segment>
+                        <source>K1 without dropping st from left needle. YO. K1 into same st.</source>
+                        <target>Tejé 1 punto derecho sin sacar el punto de la aguja izquierda. Hacé una lazada. Tejé 1 punto derecho en el mismo punto.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_pyop">
+                    <segment>
+                        <source>P1 without dropping st from left needle. YO. P1 into same st.</source>
+                        <target>Tejé 1 punto del revés sin sacar el punto de la aguja izquierda. Hacé una lazada. Tejé 1 punto del revés en el mismo punto.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_s2kp">
+                    <segment>
+                        <source>Slip 2 sts tog. K1. Pass slipped sts over.</source>
+                        <target>Deslizá 2 puntos juntos. Tejé 1 punto derecho. Pasá los puntos deslizados por encima.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_sssk">
+                    <segment>
+                        <source>Slip 3 sts knitwise. Pass to left needle and K3tog.</source>
+                        <target>Deslizá 3 puntos como si fueras a tejerlos del derecho. Pasalos a la aguja izquierda y tejelos juntos.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_tw-ssk">
+                    <segment>
+                        <source>Slip 1 purlwise. Slip 1 knitwise. Pass 2 slipped sts to left needle
+                            and K2tog tbl.</source>
+                        <target>Deslizá 1 punto como para tejerlo del revés. Deslizá 1 punto como para tejerlo del derecho. Pasá los 2 puntos deslizados a la aguja izquierda y tejelos juntos por la hebra trasera.</target>
+                    </segment>
+                </unit>
+                <unit id="st_ins_tw-k2tog">
+                    <segment>
+                        <source>Slip 1 purlwise tfl and 1 purlwise tbl. Pass 2 slipped sts to left
+                            needle and K2tog.</source>
+                        <target>Deslizá 1 punto por la hebra delantera como para tejerlo del revés y 1 punto por la hebra trasera como para tejerlo del revés. Pasá los 2 puntos deslizados a la aguja izquierda y tejelos juntos.</target>
+                    </segment>
+                </unit>
+            </group>
+        </body>
+    </file>
+</xliff>
